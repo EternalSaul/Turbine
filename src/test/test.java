@@ -50,13 +50,21 @@ public class test {
 	@Test
 	public void downloadTest() {
 		try {
-			SharedTorrent torrent=SharedTorrent.fromFile(new File("ubuntu-12.04.5-desktop-i386.iso.torrent"),new File("C:\\Users\\Saulxk\\Desktop\\ÍøÂç±à³Ì\\config\\file"));
+			SharedTorrent torrent=SharedTorrent.fromFile(new File("ubuntu-12.04.5-desktop-i386.iso.torrent"),new File("C:\\Users\\Saulxk\\Desktop\\ÍøÂç±à³Ì"));
 			List<String> s=torrent.getFilenames();
 			Client client=new Client(InetAddress.getLocalHost(), torrent);
 			client.setMaxDownloadRate(500.0);
 			client.setMaxUploadRate(10.0);
 			new Thread(new IndicateDownloading(client)).start();
 			client.download();
+			client.addObserver(new Observer() {
+				@Override
+				public void update(Observable o, Object arg) {
+					Client client = (Client) o;
+				    float progress = client.getTorrent().getCompletion();
+				    System.out.println(progress);
+				}
+			});
 			client.waitForCompletion();
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block

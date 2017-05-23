@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import nchu.turbine.interfaces.service.IMagnetService;
+import nchu.turbine.interfaces.service.ITasksDisplayService;
 
 @Component
 @Qualifier("mainFrame")
@@ -28,6 +29,9 @@ public class MainFrame extends JFrame{
 			public void run() {
 				try {
 					MainFrame window=(MainFrame) TurbineView.getContext().getBean("mainFrame");
+					ITasksDisplayService service= (ITasksDisplayService) TurbineView.getContext().getBean("tasksDisplayService");
+					service.displayCompletedTasks();
+					service.displayDownloadingTasks();
 					window.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -60,7 +64,7 @@ public class MainFrame extends JFrame{
 		this.getContentPane().setLayout(null);
 		this.getContentPane().add(jpanel);
 		this.getContentPane().add(jPanel2);
-		jpanel.setVisible(false);
-		jPanel2.setVisible(true);
+		jpanel.setVisible(true);
+		jPanel2.setVisible(false);
 	}
 }

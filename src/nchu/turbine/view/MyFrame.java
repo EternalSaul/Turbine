@@ -18,6 +18,7 @@ import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 
+import org.aspectj.weaver.bcel.UnwovenClassFileWithThirdPartyManagedBytecode.IByteCodeProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -27,13 +28,18 @@ import nchu.turbine.interfaces.service.IDirectoryChooseService;
 import nchu.turbine.interfaces.service.IMagnetService;
 
 @Component
-public class MyFrame {
+public class MyFrame implements IListBodyPanel{
 	private JFrame frame;
 	private JTextField savePath;
 	private JTextField torrentPath;
 	private DownloadListener downloadListener;
 	@Autowired
 	private IDirectoryChooseService chooseService;
+	JPanel bodyPanel;
+	@Override
+	public JPanel getBodyPanel() {
+		return bodyPanel;
+	}
 	/**
 	 * Launch the application.
 	 */
@@ -66,7 +72,8 @@ public class MyFrame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 450, 310);
+		frame.setResizable(false);
 //		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);        点X只是隐藏窗体，而非退出程序
 		frame.getContentPane().setLayout(null);
 		frame.setTitle("Turbinev2.2(---time---)");
@@ -92,7 +99,7 @@ public class MyFrame {
 		JButton viewButton = new JButton("\u6D4F\u89C8");
 		viewButton.addActionListener(new ActionListener() {//浏览按钮
 			public void actionPerformed(ActionEvent arg0) {
-				chooseService.chooseTorrentFile();
+				savePath.setText(chooseService.chooseSaveDirectory());
 			}
 		});
 		viewButton.setBounds(329, 54, 75, 20);
@@ -109,39 +116,47 @@ public class MyFrame {
 		viewButton1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				chooseService.chooseSaveDirectory();
+				torrentPath.setText(chooseService.chooseTorrentFile());
 			}
 		});
 		
-		JPanel bodyPanel = new JPanel();
-		bodyPanel.setBounds(10, 101, 414, 121);
-		frame.getContentPane().add(bodyPanel);
-		bodyPanel.setLayout(null);
+		
+		JScrollPane jScrollPane=new JScrollPane();
+		jScrollPane.setBounds(10, 101, 414, 121);
+		bodyPanel = new JPanel();
 		bodyPanel.setBorder(BorderFactory.createLineBorder(Color.gray));
-		JCheckBox id_1 = new JCheckBox("id_1");
-		id_1.setBounds(6, 6, 103, 23);
-		bodyPanel.add(id_1);
+		jScrollPane.getViewport().add(bodyPanel);
+		frame.add(jScrollPane);
 		
-		JLabel label_1 = new JLabel("\u52A8\u7269\u4E16\u754C1\u96C6");
-		label_1.setBounds(147, 10, 82, 15);
-		bodyPanel.add(label_1);
-		
-		JCheckBox id_2 = new JCheckBox("id_2");
-		id_2.setBounds(6, 31, 103, 23);
-		bodyPanel.add(id_2);
-		
-		JLabel label_2 = new JLabel("\u52A8\u7269\u4E16\u754C2\u96C6");
-		label_2.setVerticalAlignment(SwingConstants.BOTTOM);
-		label_2.setBounds(147, 31, 72, 19);
-		bodyPanel.add(label_2);
-		
-		JCheckBox checkBox = new JCheckBox("id_2");
-		checkBox.setBounds(6, 56, 103, 23);
-		bodyPanel.add(checkBox);
-		
-		JCheckBox checkBox_1 = new JCheckBox("id_2");
-		checkBox_1.setBounds(6, 200, 103, 23);
-		bodyPanel.add(checkBox_1);
+//		JPanel bodyPanel = new JPanel();
+//		bodyPanel.setBounds(10, 101, 414, 121);
+//		frame.getContentPane().add(bodyPanel);
+//		bodyPanel.setLayout(null);
+//		bodyPanel.setBorder(BorderFactory.createLineBorder(Color.gray));
+//		JCheckBox id_1 = new JCheckBox("id_1");
+//		id_1.setBounds(6, 6, 103, 23);
+//		bodyPanel.add(id_1);
+//		
+//		JLabel label_1 = new JLabel("\u52A8\u7269\u4E16\u754C1\u96C6");
+//		label_1.setBounds(147, 10, 82, 15);
+//		bodyPanel.add(label_1);
+//		
+//		JCheckBox id_2 = new JCheckBox("id_2");
+//		id_2.setBounds(6, 31, 103, 23);
+//		bodyPanel.add(id_2);
+//		
+//		JLabel label_2 = new JLabel("\u52A8\u7269\u4E16\u754C2\u96C6");
+//		label_2.setVerticalAlignment(SwingConstants.BOTTOM);
+//		label_2.setBounds(147, 31, 72, 19);
+//		bodyPanel.add(label_2);
+//		
+//		JCheckBox checkBox = new JCheckBox("id_2");
+//		checkBox.setBounds(6, 56, 103, 23);
+//		bodyPanel.add(checkBox);
+//		
+//		JCheckBox checkBox_1 = new JCheckBox("id_2");
+//		checkBox_1.setBounds(6, 200, 103, 23);
+//		bodyPanel.add(checkBox_1);
 		
 		JPanel footPanel = new JPanel();
 		footPanel.setBounds(10, 232, 414, 29);

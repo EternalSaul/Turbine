@@ -67,6 +67,7 @@ public class MagnetService implements IMagnetService{
 			while((len=is.read(b,0, 10240))!=-1){		//下载
 				downloaded+=len;
 				process=downloaded/total*100;
+				System.out.println(process);
 				tfos.write(b,0,len);
 				tfos.flush();
 			}
@@ -80,7 +81,7 @@ public class MagnetService implements IMagnetService{
 	
 	protected File getTorrentSavePath(){
 		String document=fileSystemView.getDefaultDirectory().getPath();
-		document+="/Tubine";
+		document+="/Turbine";
 		File torrentdirectory=new File(document);
 		if(!torrentdirectory.exists()) torrentdirectory.mkdirs();		//创建Turbine默认文档
 		File torrent=new File(document+"/"+System.currentTimeMillis()+".torrent");		//创建一个种子文件

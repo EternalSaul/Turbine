@@ -17,6 +17,8 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
+import nchu.turbine.aspect.AspectScanTarget;
+import nchu.turbine.dao.DaoScanTarget;
 import nchu.turbine.interfaces.service.IHandleExceptionService;
 import nchu.turbine.interfaces.service.IMagnetService;
 import nchu.turbine.service.HandleExceptionService;
@@ -29,7 +31,7 @@ import nchu.turbine.view.ViewScanTarget;
  * @author Saulxk
  * </br>EditDate: 2017-05-17
  */
-@ComponentScan(basePackageClasses={ServiceScanTarget.class})
+@ComponentScan(basePackageClasses={ServiceScanTarget.class,AspectScanTarget.class,DaoScanTarget.class})
 @Configuration
 @PropertySource(value="classpath:TorrentService.properties")
 public class TurbineContextConfig { 

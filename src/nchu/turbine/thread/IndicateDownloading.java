@@ -31,17 +31,18 @@ public class IndicateDownloading implements Runnable {
 				Thread.sleep(2000);
 			}
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
 	public void printInfo(){
+		System.out.println("123");
 		System.out.println("文件名"+client.getTorrent().getFilenames().get(0));
 		System.out.println("文件总大小"+client.getTorrent().getSize());
 		System.out.println("服务器数"+client.getTorrent().getTrackerCount());
 		System.out.println("上传数"+client.getTorrent().getUploaded());
-		System.out.println("下载数"+client.getTorrent().getLeft()+"\n\n");
+		System.out.println("剩余数"+client.getTorrent().getLeft());
+		System.out.println("下载数"+client.getTorrent().getDownloaded()+"\n\n");
 	}
 	
 
