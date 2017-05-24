@@ -100,20 +100,4 @@ public class DownloadingObserver implements Observer{
 		System.out.println("ratex:"+rate);
 	}
 	
-//	private void flushView(){
-//		new Thread(new Runnable() {
-//			public void run() {
-//				while(true){
-//					if(remain==0) break;
-//					timeUpdate();
-//					rateUpdate();
-//					try {
-//						Thread.sleep(1000);
-//					} catch (InterruptedException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//		}).start();
-//	}
 }

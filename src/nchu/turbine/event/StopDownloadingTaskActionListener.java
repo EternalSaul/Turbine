@@ -22,7 +22,13 @@ import nchu.turbine.thread.DownloadingObserver;
 import nchu.turbine.view.DownloadingTaskPanel;
 import nchu.turbine.view.TurbineView;
 
+/**
+ * 暂停和继续任务按钮事件
+ * @author Saulxk
+ * </br>EditDate: 2017-05-24
+ */
 public class StopDownloadingTaskActionListener implements ActionListener{
+	
 	Client client;
 	DownloadingTaskPanel taskPanel;
 	
@@ -46,27 +52,26 @@ public class StopDownloadingTaskActionListener implements ActionListener{
 			public void run() {
 				JButton stop=((JButton)event.getSource());
 				if(stop.getText().equals("暂停")){
-					stop.setText("继续");
-//					client.deleteObservers();
+					//切换到不响应事件状态
+					stop.setText("正在暂停");
 					client.stop();
-				}else{
+					//暂停成功切换回响应状态
+					stop.setText("继续");
+				}else if(stop.getText().equals("继续")){
 					stop.setText("暂停");
 					Client client=null;
 					try {
+						//解析种子文件，创建下载种子
 						SharedTorrent torrent=SharedTorrent.fromFile(taskPanel.getTorrent(),taskPanel.getSaveDirectory());
+						//创建新的下载客户端
 						client = new Client(InetAddress.getLocalHost(), torrent);
 						taskPanel.setClient(client);
+						//从上下文中取出下载服务
 						IDownloadService downloadService=(IDownloadService) TurbineView.getContext().getBean("downloadService");
+						//刷新自身的下载客户端
 						StopDownloadingTaskActionListener.this.client=client;
+						//把任务委派给下载服务中的下载线程
 						downloadService.startdownload(client, taskPanel, taskPanel.getSaveDirectory());
-//						client.download();
-//						client.addObserver(new DownloadingObserver(taskPanel));
-//						client.waitForCompletion();
-//						if(torrent.isComplete()){
-//							
-//						}else{
-//							
-//						}
 					} catch (NoSuchAlgorithmException e) {
 						e.printStackTrace();
 					} catch (UnknownHostException e) {

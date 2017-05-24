@@ -1,8 +1,11 @@
 package nchu.turbine.view;
 
 import java.awt.Color;
-
+import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.Frame;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -65,6 +68,7 @@ public class MyFrame implements IListBodyPanel{
 		downloadListener.setFrame(frame);
 		downloadListener.setSavePath(savePath);
 		downloadListener.setTorrentPath(torrentPath);
+		downloadListener.setFilesDisplay(bodyPanel);
 	}
 
 	/**
@@ -120,43 +124,12 @@ public class MyFrame implements IListBodyPanel{
 			}
 		});
 		
-		
 		JScrollPane jScrollPane=new JScrollPane();
-		jScrollPane.setBounds(10, 101, 414, 121);
+		jScrollPane.setBounds(10,101, 414, 121);
 		bodyPanel = new JPanel();
 		bodyPanel.setBorder(BorderFactory.createLineBorder(Color.gray));
 		jScrollPane.getViewport().add(bodyPanel);
-		frame.add(jScrollPane);
-		
-//		JPanel bodyPanel = new JPanel();
-//		bodyPanel.setBounds(10, 101, 414, 121);
-//		frame.getContentPane().add(bodyPanel);
-//		bodyPanel.setLayout(null);
-//		bodyPanel.setBorder(BorderFactory.createLineBorder(Color.gray));
-//		JCheckBox id_1 = new JCheckBox("id_1");
-//		id_1.setBounds(6, 6, 103, 23);
-//		bodyPanel.add(id_1);
-//		
-//		JLabel label_1 = new JLabel("\u52A8\u7269\u4E16\u754C1\u96C6");
-//		label_1.setBounds(147, 10, 82, 15);
-//		bodyPanel.add(label_1);
-//		
-//		JCheckBox id_2 = new JCheckBox("id_2");
-//		id_2.setBounds(6, 31, 103, 23);
-//		bodyPanel.add(id_2);
-//		
-//		JLabel label_2 = new JLabel("\u52A8\u7269\u4E16\u754C2\u96C6");
-//		label_2.setVerticalAlignment(SwingConstants.BOTTOM);
-//		label_2.setBounds(147, 31, 72, 19);
-//		bodyPanel.add(label_2);
-//		
-//		JCheckBox checkBox = new JCheckBox("id_2");
-//		checkBox.setBounds(6, 56, 103, 23);
-//		bodyPanel.add(checkBox);
-//		
-//		JCheckBox checkBox_1 = new JCheckBox("id_2");
-//		checkBox_1.setBounds(6, 200, 103, 23);
-//		bodyPanel.add(checkBox_1);
+		frame.getContentPane().add(jScrollPane);
 		
 		JPanel footPanel = new JPanel();
 		footPanel.setBounds(10, 232, 414, 29);

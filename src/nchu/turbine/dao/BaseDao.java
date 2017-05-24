@@ -9,8 +9,20 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Vector;
 
+/**
+ * Dao基类，为了简化上层，代码复用
+ * @author Saulxk
+ * @param <T>
+ * </br>EditDate: 2017-05-23
+ */
 public class BaseDao<T> {
 	
+	/**
+	 * 取出持久化的对象
+	 * @param diretory		持久化文件路径
+	 * @return
+	 * </br>EditDate: 2017-05-23
+	 */
 	Vector<T> find(String diretory) {
 		Vector<T> ts=null;
 		File file=new File(diretory);
@@ -37,6 +49,13 @@ public class BaseDao<T> {
 		return ts;
 	}
 	
+	/**
+	 * 持久化操作
+	 * @param ts		持久化对象向量
+	 * @param diretory	持久化文件路径
+	 * @throws IOException
+	 * </br>EditDate: 2017-05-23
+	 */
 	void save(Vector<T> ts,String diretory) throws IOException{
 		FileOutputStream fos=new FileOutputStream(diretory);
 		ObjectOutputStream os=new ObjectOutputStream(fos);

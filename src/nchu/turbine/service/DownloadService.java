@@ -47,24 +47,24 @@ public class DownloadService extends BaseService implements IDownloadService{
 			public void run() {
 			try {
 					SharedTorrent torrent=SharedTorrent.fromFile(torrentfile, directory);
-					
+					//创建Torrent客户端
 					Client client=new Client(InetAddress.getLocalHost(), torrent);
 					System.out.println("开始下载任务");
 					client.setMaxDownloadRate(500.0);
 					client.setMaxUploadRate(10.0);
+					
+					//开始下载
 					client.download();
 					
 					DownloadingTaskPanel taskPanel=displayService.addDownloadingTasks(torrent.getName(),
 							sizeInfo(torrent.getSize()), torrent.getFilenames().size(), client, System.currentTimeMillis(),directory,torrentfile);
 					
-					client.waitForCompletion();	//阻塞直到文件下载完成
+					//阻塞直到文件下载完成
+					client.waitForCompletion();	
 					
+					//验证是暂停任务还是完成
 					validateComplete(torrent, taskPanel, directory);
-//					if(torrent.isComplete()){
-//						exceptionService.handleException(new TurbineException(torrent.getName()+"文件已经下载!"),"提示",JOptionPane.DEFAULT_OPTION);
-//						displayService.removeDownloadingTasks(taskPanel);
-//						displayService.addCompletedTasks(torrent.getName(),sizeInfo(torrent.getSize()), format.format(System.currentTimeMillis()), directory);
-//					}
+					
 				} catch (NoSuchAlgorithmException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -100,14 +100,10 @@ public class DownloadService extends BaseService implements IDownloadService{
 					//阻塞等待停止或中断
 					client.waitForCompletion();
 					
+					//验证是暂停任务还是完成
 					validateComplete(torrent, taskPanel, directory);
-//					if(torrent.isComplete()){
-//						exceptionService.handleException(new TurbineException(torrent.getName()+"文件已经下载!"),"提示",JOptionPane.DEFAULT_OPTION);
-//						displayService.removeDownloadingTasks(taskPanel);
-//						displayService.addCompletedTasks(torrent.getName(),sizeInfo(torrent.getSize()), format.format(System.currentTimeMillis()), directory);
-//					}else{
-//						
-//					}
+
+					
 			}
 		}).start();
 	}	
@@ -117,7 +113,7 @@ public class DownloadService extends BaseService implements IDownloadService{
 	 * @return
 	 * </br>EditDate: 2017-05-21
 	 */
-	public String sizeInfo(long size){
+	protected String sizeInfo(long size){
 		if(size>GB){
 			return String.valueOf(((double)size/GB))+"MB";
 		}else if(size>MB){
@@ -128,8 +124,8 @@ public class DownloadService extends BaseService implements IDownloadService{
 		return String.valueOf(size)+"B";
 	}
 	
-	public void validateComplete(SharedTorrent torrent,DownloadingTaskPanel taskPanel,File directory){
-		if(torrent.isComplete()){
+	protected void validateComplete(SharedTorrent torrent,DownloadingTaskPanel taskPanel,File directory){
+		if(torrent.isComplete()){//检测任务是否完成
 			exceptionService.handleException(new TurbineException(torrent.getName()+"文件已经下载!"),"提示",JOptionPane.DEFAULT_OPTION);
 			displayService.removeDownloadingTasks(taskPanel);
 			displayService.addCompletedTasks(torrent.getName(),sizeInfo(torrent.getSize()), format.format(System.currentTimeMillis()), directory);

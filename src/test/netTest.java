@@ -25,6 +25,7 @@ public class netTest {
 	
 	@Test
 	public void magenet_load(){
+//		magnet:?xt=urn:btih:e14a9a15df939622b478b5ce4f83a841474d145f
 		ClassPathXmlApplicationContext applicationContext=new ClassPathXmlApplicationContext("Bean.xml");
 		IMagnetService service=(IMagnetService) applicationContext.getBean("magnetService");
 		File file=service.Magnet2Torrent("magnet:?xt=urn:btih:11aabbec897260de25a71f149712114bf9e38ddf");

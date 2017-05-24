@@ -1,11 +1,15 @@
 package nchu.turbine.service;
 
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.io.File;
+import java.util.List;
 import java.util.Vector;
 
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -181,5 +185,50 @@ public class TasksDisplayService extends BaseService implements ITasksDisplaySer
 				jPanel.validate();
 				jPanel.repaint();
 	}
+	
+	@Override
+	public void displayTorrentFilesList(JPanel filesDisplay,List<String> files){
+		int num=files.size()+1;
+		System.out.println(num);
+		System.out.println((num>6?num:6));
+		
+//		filesDisplay.setPreferredSize(new Dimension(414,num*18));
+//		filesDisplay.setSize(414, 121);
+//		filesDisplay.setLayout(new GridLayout(6,1,0,2));
+		
+		filesDisplay.setSize(414, num*20);
+		filesDisplay.setLayout(new GridLayout((num>6?num:6),1,0,2));
+		
+		//移除以前的视图
+		filesDisplay.removeAll();
+		
+		JLabel jLabel=new JLabel("已检测到种子包含以下文件:");
+		jLabel.setPreferredSize(new Dimension(400, 20));
+		filesDisplay.add(jLabel);
+		
+		int i=0;
+		for(String file:files){
+//			if(++i>4){ 
+//				jLabel=new JLabel("...");
+//				jLabel.setPreferredSize(new Dimension(400, 20));
+//				filesDisplay.add(jLabel);
+//				break;
+//			}
+			jLabel=new JLabel(file);
+			jLabel.setPreferredSize(new Dimension(400, 20));
+			filesDisplay.add(jLabel);
+		}
 
+		
+		
+		filesDisplay.validate();
+		filesDisplay.repaint();
+	}
+	
+	@Override
+	public void removeTorrentFilesList(JPanel filesDisplay){
+		filesDisplay.removeAll();
+		filesDisplay.validate();
+		filesDisplay.repaint();
+	}
 }

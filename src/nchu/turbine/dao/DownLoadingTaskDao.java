@@ -26,53 +26,16 @@ public class DownLoadingTaskDao extends BaseDao<DownloadingTaskPanel> implements
 	
 	@Override
 	public Vector<DownloadingTaskPanel> find() {
-		try {
-			return	resetClient(super.find(diretory));
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return null;
+			return	super.find(diretory);
 	}
 
 	@Override
 	public void save(Vector<DownloadingTaskPanel> ts) {
 		try {
-			super.save(cleanClient(ts),diretory);
+			super.save(ts, diretory);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
-	private Vector<DownloadingTaskPanel> cleanClient(Vector<DownloadingTaskPanel> ts){
-		Vector<DownloadingTaskPanel> vd=new Vector<DownloadingTaskPanel>();
-		for(DownloadingTaskPanel taskPanel:ts){
-			DownloadingTaskPanel panel=taskPanel.serializableClone();
-			panel.getStop().setText("¼ÌÐø");
-			vd.add(panel);
-		}
-		return vd;
-	}
-	
-	private Vector<DownloadingTaskPanel> resetClient(Vector<DownloadingTaskPanel> vd) throws UnknownHostException, IOException, NoSuchAlgorithmException{
-		Vector<DownloadingTaskPanel> ts=new Vector<DownloadingTaskPanel>();
-		for(DownloadingTaskPanel taskPanel:vd){
-			System.out.println("dao.torrent:"+taskPanel.getTorrent());
-			System.out.println("dao.save:"+taskPanel.getSaveDirectory());
-			SharedTorrent torrent=SharedTorrent.fromFile(taskPanel.getTorrent(),taskPanel.getSaveDirectory());
-			Client client=new Client(InetAddress.getLocalHost(), torrent);
-			client.setMaxDownloadRate(500.0);
-			client.setMaxUploadRate(10.0);
-			taskPanel.setClient(client);
-			taskPanel.getStop().addActionListener(new StopDownloadingTaskActionListener(client,taskPanel));
-			taskPanel.getDelete().addActionListener(new DeleteDownloadingTaskActionListener(client, taskPanel));
-			ts.add(taskPanel);
-		}
-		return ts;
-	}
-
 	
 }

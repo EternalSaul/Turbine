@@ -2,6 +2,9 @@ package nchu.turbine.interfaces.service;
 
 import java.awt.Event;
 import java.io.File;
+import java.util.List;
+
+import javax.swing.JPanel;
 
 import com.turn.ttorrent.client.Client;
 
@@ -57,4 +60,8 @@ public interface ITasksDisplayService {
 	 * </br>EditDate: 2017-05-21
 	 */
 	public void removeCompletedTasks(CompletedTaskPanel taskPanel);
+	
+	void displayTorrentFilesList(JPanel filesDisplay, List<String> files);
+	
+	void removeTorrentFilesList(JPanel filesDisplay);
 }

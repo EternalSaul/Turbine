@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.turn.ttorrent.client.Client;
 
 import nchu.turbine.event.DeleteDownloadingTaskActionListener;
+import nchu.turbine.event.OpenCompletedDownloadTaskActionListener;
 import nchu.turbine.event.StopDownloadingTaskActionListener;
 import nchu.turbine.interfaces.service.ITasksDisplayService;
 
@@ -33,6 +34,7 @@ public class DownloadingTaskPanel extends JPanel{
 	JProgressBar progress;//下载进度
 	JButton delete;
 	JButton stop;
+	JButton openFile;
 	public long getCreateTime() {
 		return createTime;
 	}
@@ -69,6 +71,10 @@ public class DownloadingTaskPanel extends JPanel{
 	public JButton getDelete() {
 		return delete;
 	}
+	
+	public JButton getOpenFile() {
+		return openFile;
+	}
 	/**
 	 * @param nameLab				任务名
 	 * @param size					任务大小
@@ -85,25 +91,6 @@ public class DownloadingTaskPanel extends JPanel{
 		this.torrent=torrent;
 		init(nameLab,size,num);
 	}
-	
-	
-//	public DownloadingTaskPanel(long createTime, Client client, JLabel name, JLabel nameLab, JLabel size, JLabel num,
-//			JLabel time, JLabel speed, JLabel stop, File torrent, File saveDirectory, JProgressBar progress,JButton delete) {
-//		this.createTime = createTime;
-//		this.client = client;
-//		this.name = name;
-//		this.nameLab = nameLab;
-//		this.size = size;
-//		this.num = num;
-//		this.time = time;
-//		this.speed = speed;
-//		this.stop = stop;
-//		this.torrent = torrent;
-//		this.saveDirectory = saveDirectory;
-//		this.progress = progress;
-//		this.delete=delete;
-//		init(name, csize, cnum);
-//	}
 	
 	/**
 	 * @param cnameLab		任务名
@@ -163,11 +150,22 @@ public class DownloadingTaskPanel extends JPanel{
 		this.add(delete);
 		
 		delete.addActionListener(new DeleteDownloadingTaskActionListener(client, this));
+		
+		openFile = new JButton("\u6253\u5F00\u6587\u4EF6");//打开文件按钮
+		openFile.setForeground(Color.BLACK);
+		openFile.setForeground(Color.RED);
+		openFile.setBounds(65, 75, 93, 23);
+		this.add(openFile);
+		openFile.addActionListener(new OpenCompletedDownloadTaskActionListener(saveDirectory));
 	}
 	
+	/**
+	 * 让DownloadingTaskPanel可串行化
+	 * 实际上是把Client设置为null
+	 * @return		原对象的可串行化对象
+	 * </br>EditDate: 2017-05-23
+	 */
 	public DownloadingTaskPanel serializableClone(){
-		System.out.println("sdsds"+saveDirectory);
-		System.out.println("sss"+torrent);
 		return new DownloadingTaskPanel(nameLab.getText(), size.getText(), 
 				Integer.parseInt(num.getText()),null,createTime, saveDirectory,torrent);
 	}
