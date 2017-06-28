@@ -10,6 +10,11 @@ import nchu.turbine.view.SecondPanel;
 import nchu.turbine.view.ThirdPanel;
 import nchu.turbine.view.TurbineView;
 
+/**
+ * 切换正在下载任务和已下载任务界面的事件
+ * @author Saulxk
+ * </br>EditDate: 2017-06-24
+ */
 @Component
 @Qualifier("toggleListener")
 public class ToggleListener implements MouseListener{

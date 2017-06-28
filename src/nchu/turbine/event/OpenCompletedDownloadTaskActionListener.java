@@ -5,9 +5,21 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * 打开已完成的任务保存路径事件
+ * @author Saulxk
+ * </br>EditDate: 2017-06-24
+ */
 public class OpenCompletedDownloadTaskActionListener implements ActionListener{
+	/**
+	 * 保存的文件路径
+	 */
 	File saveDirectory;
 	
+	/**
+	 * @param saveDirectory	文件路径
+	 * </br>EditDate: 2017-06-24
+	 */
 	public OpenCompletedDownloadTaskActionListener(File saveDirectory) {
 		super();
 		this.saveDirectory = saveDirectory;

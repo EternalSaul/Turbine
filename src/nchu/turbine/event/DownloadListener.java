@@ -42,10 +42,25 @@ import nchu.turbine.view.TurbineView;
 @Component
 @Qualifier("downloadListener")
 public class DownloadListener implements MouseListener{
+	/**
+	 * 任务下载保存路径
+	 */
 	private JTextField savePath;
+	/**
+	 * 种子文件路径
+	 */
 	private JTextField torrentPath;
+	/**
+	 * 触发窗体
+	 */
 	private JFrame frame;
+	/**
+	 * 种子对应的文件显示区域
+	 */
 	private JPanel filesDisplay;
+	/**
+	 * 解析种子文件或磁力链接的线程池
+	 */
 	ExecutorService service=Executors.newFixedThreadPool(1);
 	/**
 	 * 磁力链接转化服务
@@ -53,6 +68,9 @@ public class DownloadListener implements MouseListener{
 	@Autowired
 	private IMagnetService magnetService;
 	
+	/**
+	 * 任务显示服务
+	 */
 	@Autowired
 	private ITasksDisplayService displayService;
 	

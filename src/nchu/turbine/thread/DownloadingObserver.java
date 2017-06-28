@@ -7,6 +7,12 @@ import com.turn.ttorrent.client.Client;
 
 import nchu.turbine.view.DownloadingTaskPanel;
 
+/**
+ * 该类用于在界面上更新显示下载速度，时间
+ * 它作为TTorrent框架中Client类的观察者
+ * @author Saulxk
+ * </br>EditDate: 2017-06-03
+ */
 public class DownloadingObserver implements Observer{
 
 	final static int KB=1024;

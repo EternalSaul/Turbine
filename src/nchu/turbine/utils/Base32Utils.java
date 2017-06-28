@@ -10,5 +10,6 @@ public class Base32Utils {
 		BigInteger integer=new BigInteger(hex,16);
 		String b32=new String(base32.encode(integer.toByteArray()));
 		return b32;
+		
 	}
 }

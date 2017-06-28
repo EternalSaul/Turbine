@@ -11,6 +11,11 @@ import com.turn.ttorrent.client.Client;
 import nchu.turbine.view.CompletedTaskPanel;
 import nchu.turbine.view.DownloadingTaskPanel;
 
+/**
+ * 用于刷新显示任务列表
+ * @author Saulxk
+ * </br>EditDate: 2017-06-03
+ */
 public interface ITasksDisplayService {
 
 	/**

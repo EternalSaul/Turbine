@@ -33,6 +33,11 @@ public class StopDownloadingTaskActionListener implements ActionListener{
 	DownloadingTaskPanel taskPanel;
 	
 	
+	/**	
+	 * @param client		对应Ttorrent框架中 BT任务客户对象
+	 * @param taskPanel		对应正在下载任务对象
+	 * </br>EditDate: 2017-06-24
+	 */
 	public StopDownloadingTaskActionListener(Client client,	DownloadingTaskPanel taskPanel) {
 		this.client = client;
 		this.taskPanel=taskPanel;

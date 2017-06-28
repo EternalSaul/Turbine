@@ -21,6 +21,11 @@ import nchu.turbine.interfaces.service.IDownloadService;
 import nchu.turbine.interfaces.service.ITasksDisplayService;
 import nchu.turbine.thread.DownloadingObserver;
 import nchu.turbine.view.DownloadingTaskPanel;
+/**
+ * 下载服务实现
+ * @author Saulxk
+ * </br>EditDate: 2017-06-24
+ */
 @Component
 public class DownloadService extends BaseService implements IDownloadService{
 	
@@ -66,13 +71,13 @@ public class DownloadService extends BaseService implements IDownloadService{
 					validateComplete(torrent, taskPanel, directory);
 					
 				} catch (NoSuchAlgorithmException e) {
-					// TODO Auto-generated catch block
+					exceptionService.handleException(new TurbineException("NoSuchAlgorithmException!"),"提示",JOptionPane.DEFAULT_OPTION);
 					e.printStackTrace();
 				} catch (UnknownHostException e) {
-					// TODO Auto-generated catch block
+					exceptionService.handleException(new TurbineException("找不到主机!"),"提示",JOptionPane.DEFAULT_OPTION);
 					e.printStackTrace();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
+					exceptionService.handleException(new TurbineException("位置错误!"),"提示",JOptionPane.DEFAULT_OPTION);
 					e.printStackTrace();
 				}
 			}
@@ -80,6 +85,10 @@ public class DownloadService extends BaseService implements IDownloadService{
 	}	
 	
 	
+	/* (non-Javadoc)
+	 * @see nchu.turbine.interfaces.service.IDownloadService#startdownload(com.turn.ttorrent.client.Client, nchu.turbine.view.DownloadingTaskPanel, java.io.File)
+	 * </br>EditDate: 2017-06-24
+	 */
 	@Override
 	public void startdownload(Client client,DownloadingTaskPanel taskPanel,File directory){
 		new Thread(new Runnable() {

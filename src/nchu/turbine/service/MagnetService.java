@@ -17,6 +17,11 @@ import org.springframework.stereotype.Component;
 import nchu.turbine.interfaces.service.IMagnetService;
 import nchu.turbine.utils.Base32Utils;
 
+/**
+ * 磁力链接解析服务实现
+ * @author Saulxk
+ * </br>EditDate: 2017-06-24
+ */
 @Component
 public class MagnetService implements IMagnetService{
 	
@@ -50,6 +55,13 @@ public class MagnetService implements IMagnetService{
 		return tf;
 	}
 	
+	/**
+	 * Turbine种子库磁力链接解析
+	 * @param hash  磁力链接特征
+	 * @return
+	 * @throws IOException
+	 * </br>EditDate: 2017-06-24
+	 */
 	public File TurbineMagnetServer(String hash) throws IOException{
 		
 		System.out.println("TurbineMagnetServer执行");
@@ -83,6 +95,13 @@ public class MagnetService implements IMagnetService{
 		return tf;
 	}
 	
+	/**
+	 * Vezu磁力链接解析
+	 * @param urn	磁力链接特征
+	 * @return		种子文件
+	 * @throws IOException
+	 * </br>EditDate: 2017-06-24
+	 */
 	public File VezuMagnetServer(String urn) throws IOException{
 		System.out.println("vezu已经执行");
 		String hash=Base32Utils.biginteger_Encode_Base32(urn);
@@ -126,6 +145,11 @@ public class MagnetService implements IMagnetService{
 	}
 	
 	
+	/**
+	 * 获取种子文件保存路径
+	 * @return   获取种子文件保存路径
+	 * </br>EditDate: 2017-06-24
+	 */
 	protected File getTorrentSavePath(){
 		String document=fileSystemView.getDefaultDirectory().getPath();
 		document+="/Turbine";

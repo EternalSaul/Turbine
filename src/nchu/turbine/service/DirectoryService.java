@@ -7,6 +7,11 @@ import org.springframework.stereotype.Component;
 
 import nchu.turbine.interfaces.service.IDirectoryChooseService;
 
+/**
+ * 路径服务实现
+ * @author Saulxk
+ * </br>EditDate: 2017-06-24
+ */
 @Component
 public class DirectoryService extends BaseService implements IDirectoryChooseService{
 	

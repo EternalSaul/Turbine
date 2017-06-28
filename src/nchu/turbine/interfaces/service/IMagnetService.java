@@ -4,6 +4,11 @@ import java.io.File;
 
 import com.turn.ttorrent.common.Torrent;
 
+/**
+ * 通过磁力链接获取种子文件
+ * @author Saulxk
+ * </br>EditDate: 2017-05-23
+ */
 public interface IMagnetService {
 	
 	/**

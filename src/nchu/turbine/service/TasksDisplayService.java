@@ -35,6 +35,11 @@ import nchu.turbine.view.SecondPanel;
 import nchu.turbine.view.ThirdPanel;
 import nchu.turbine.view.TurbineView;
 
+/**
+ * 任务显示服务对象实现
+ * @author Saulxk
+ * </br>EditDate: 2017-06-24
+ */
 @Component
 public class TasksDisplayService extends BaseService implements ITasksDisplayService{
 	

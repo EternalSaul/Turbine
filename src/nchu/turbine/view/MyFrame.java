@@ -80,7 +80,7 @@ public class MyFrame implements IListBodyPanel{
 		frame.setResizable(false);
 //		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);        点X只是隐藏窗体，而非退出程序
 		frame.getContentPane().setLayout(null);
-		frame.setTitle("Turbinev2.2(---time---)");
+		frame.setTitle("Turbine 1.0");
 		JPanel headPanel = new JPanel();
 		headPanel.setBounds(10, 10, 414, 81);
 		headPanel.setBorder(BorderFactory.createLineBorder(Color.gray));
