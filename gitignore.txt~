@@ -1,0 +1,12 @@
+gitignore.txt
+*.jpg
+*.png
+*.jar
+*.gif
+*.torrent
+*.zip
+.settings/
+.classpath
+.project
+build/
+pic/
