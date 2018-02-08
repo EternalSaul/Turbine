@@ -24,22 +24,7 @@ public class MainFrame extends JFrame{
 	private JPanel jpanel;
 	private JPanel jPanel2;
 	
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainFrame window=(MainFrame) TurbineView.getContext().getBean("mainFrame");
-					ITasksDisplayService service= (ITasksDisplayService) TurbineView.getContext().getBean("tasksDisplayService");
-					service.displayCompletedTasks();
-					service.displayDownloadingTasks();
-					window.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	
+
 	public MainFrame(@Qualifier("secondPanel") JPanel jpanel,@Qualifier("thirdPanel")JPanel jPanel2) {
 		this.jpanel = jpanel;
 		this.jPanel2=jPanel2;

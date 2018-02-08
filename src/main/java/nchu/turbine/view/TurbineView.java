@@ -1,6 +1,5 @@
 package nchu.turbine.view;
 
-import org.apache.log4j.chainsaw.Main;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

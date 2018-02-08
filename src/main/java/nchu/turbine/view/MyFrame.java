@@ -43,21 +43,6 @@ public class MyFrame implements IListBodyPanel{
 	public JPanel getBodyPanel() {
 		return bodyPanel;
 	}
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MyFrame window =(MyFrame) TurbineView.getContext().getBean("myFrame");
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the application.

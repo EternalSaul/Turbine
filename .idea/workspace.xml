@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ad798e3-b054-4c19-a59d-8182818edcd2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/org.eclipse.swt.win32.win32.x86_64_3.105.0.v20160603-0902.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/org.eclipse.swt_3.105.0.v20160603-0902.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ttorrent-core-1.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/main/TurbineMain.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.README.md.swp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/BeanTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/ScrollTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/TurbineTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/fileloadtest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/netTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/test.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Bean.xml" afterPath="$PROJECT_DIR$/source/Bean.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/TorrentService.properties" afterPath="$PROJECT_DIR$/source/TorrentService.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/aspect/AspectScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/aspect/AspectScanTarget.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/aspect/DownloadingTaskAccessAspect.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/aspect/DownloadingTaskAccessAspect.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/config/TurbineContextConfig.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineContextConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/config/TurbineMainConfig.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineMainConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/config/TurbineViewConfig.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineViewConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/dao/BaseDao.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/dao/BaseDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/dao/CompletedTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/dao/CompletedTaskDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/dao/DaoScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/dao/DaoScanTarget.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/dao/DownLoadingTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/dao/DownLoadingTaskDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/DefaultMouseListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/DefaultMouseListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/DeleteCompletedDownloadTaskActionListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/DeleteCompletedDownloadTaskActionListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/DeleteDownloadingTaskActionListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/DeleteDownloadingTaskActionListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/DownloadListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/DownloadListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/EventScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/EventScanTarget.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/NewDownloadTaskListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/NewDownloadTaskListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/OpenCompletedDownloadTaskActionListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/OpenCompletedDownloadTaskActionListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/StopDownloadingTaskActionListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/StopDownloadingTaskActionListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/ToggleListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/ToggleListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/exception/TorrentFileNotFoundException.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/exception/TorrentFileNotFoundException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/exception/TurbineException.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/exception/TurbineException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/dao/ICompletedTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/dao/ICompletedTaskDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/dao/IDownloadingTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/dao/IDownloadingTaskDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/IDirectoryChooseService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/IDirectoryChooseService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/IDownloadService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/IDownloadService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/IHandleExceptionService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/IHandleExceptionService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/IMagnetService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/IMagnetService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/IServiceScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/IServiceScanTarget.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/ITasksDisplayService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/ITasksDisplayService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/BaseService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/BaseService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/DirectoryService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/DirectoryService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/DownloadService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/DownloadService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/HandleExceptionService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/HandleExceptionService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/MagnetService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/MagnetService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/ServiceScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/ServiceScanTarget.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/TasksDisplayService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/TasksDisplayService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/thread/DownloadingObserver.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/thread/DownloadingObserver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/thread/IndicateDownloading.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/thread/IndicateDownloading.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/utils/Base32Utils.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/utils/Base32Utils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/CompletedTaskPanel.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/CompletedTaskPanel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/DownloadingTaskPanel.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/DownloadingTaskPanel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/IListBodyPanel.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/IListBodyPanel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/MainFrame.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/MainFrame.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/MyFrame.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/MyFrame.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/SecondPanel.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/SecondPanel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/ThirdPanel.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/ThirdPanel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/TurbineView.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/TurbineView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/ViewScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/ViewScanTarget.java" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Turbine" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="TurbineMain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/main/TurbineMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/aspect/DownloadingTaskAccessAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineContextConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineMainConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineViewConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/view/TurbineView.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/main/TurbineMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/view/MyFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/view/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/view/DownloadingTaskPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/view/CompletedTaskPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/view/ViewScanTarget.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.5.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="465" />
+    <option name="y" value="117" />
+    <option name="width" value="1400" />
+    <option name="height" value="1048" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Turbine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Turbine" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Saulxk\Desktop\我的文件夹\临时文件\Turbine\lib" />
+      <recent name="C:\Users\Saulxk\Desktop\我的文件夹\临时文件\Turbine" />
+      <recent name="C:\Users\Saulxk\Desktop\我的文件夹\临时文件\Turbine\src\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Saulxk\Desktop\我的文件夹\临时文件\Turbine" />
+      <recent name="C:\Users\Saulxk\Desktop\我的文件夹\临时文件\Turbine\src\resource" />
+      <recent name="C:\Users\Saulxk\Desktop\我的文件夹\临时文件\Turbine\src\main\java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.TurbineMain">
+    <configuration name="MainFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="nchu.turbine.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="nchu.turbine.view.MainFrame" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Turbine" />
+      <envs />
+    </configuration>
+    <configuration name="MyFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="nchu.turbine.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="nchu.turbine.view.MyFrame" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Turbine" />
+      <envs />
+    </configuration>
+    <configuration name="TurbineMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="nchu.turbine.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="nchu.turbine.main.TurbineMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Turbine" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.MyFrame" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MainFrame" />
+      <item index="2" class="java.lang.String" itemvalue="Application.TurbineMain" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.TurbineMain" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MainFrame" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MyFrame" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ad798e3-b054-4c19-a59d-8182818edcd2" name="Default" comment="" />
+      <created>1518077495735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1518077495735</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.4954751" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5045249" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/dao/DownLoadingTaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineMainConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <marker date="1518077429039" expanded="true" signature="570:646" ph="/**...*/" />
+            <marker date="1518077429039" expanded="true" signature="647:753" ph="@{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineViewConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="e#1432#1433#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+            <marker date="1518077429040" expanded="false" signature="1645:1649" ph=" { " />
+            <marker date="1518077429040" expanded="false" signature="1667:1670" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/utils/Base32Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Bean.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/aspect/DownloadingTaskAccessAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#2441#2463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineContextConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/TorrentService.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/CompletedTaskPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/ViewScanTarget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <marker date="1518077429125" expanded="true" signature="28:110" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/ThirdPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/TurbineView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/SecondPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1099">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/MyFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="129" column="14" lean-forward="false" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-179">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/IListBodyPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/DownloadingTaskPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1518077429119" expanded="true" signature="4105:4140" ph="/**...*/" />
+            <marker date="1518077429119" expanded="true" signature="4189:4340" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/fileloadtest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/main/TurbineMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.12.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Turbine</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
