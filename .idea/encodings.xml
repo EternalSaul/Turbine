@@ -5,6 +5,9 @@
     <file url="file://$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineContextConfig.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineMainConfig.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineViewConfig.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/nchu/turbine/event/DownloadListener.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/nchu/turbine/service/DownloadService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/nchu/turbine/service/MagnetService.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/CompletedTaskPanel.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/DownloadingTaskPanel.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/nchu/turbine/view/MainFrame.java" charset="GBK" />
