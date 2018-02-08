@@ -2,73 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ad798e3-b054-4c19-a59d-8182818edcd2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/org.eclipse.swt.win32.win32.x86_64_3.105.0.v20160603-0902.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/org.eclipse.swt_3.105.0.v20160603-0902.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ttorrent-core-1.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/main/TurbineMain.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.README.md.swp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/BeanTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/ScrollTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/TurbineTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/fileloadtest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/netTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/test.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Bean.xml" afterPath="$PROJECT_DIR$/source/Bean.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/TorrentService.properties" afterPath="$PROJECT_DIR$/source/TorrentService.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/aspect/AspectScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/aspect/AspectScanTarget.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/aspect/DownloadingTaskAccessAspect.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/aspect/DownloadingTaskAccessAspect.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/config/TurbineContextConfig.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineContextConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/config/TurbineMainConfig.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineMainConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/config/TurbineViewConfig.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/config/TurbineViewConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/dao/BaseDao.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/dao/BaseDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/dao/CompletedTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/dao/CompletedTaskDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/dao/DaoScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/dao/DaoScanTarget.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/dao/DownLoadingTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/dao/DownLoadingTaskDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/DefaultMouseListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/DefaultMouseListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/DeleteCompletedDownloadTaskActionListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/DeleteCompletedDownloadTaskActionListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/DeleteDownloadingTaskActionListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/DeleteDownloadingTaskActionListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/DownloadListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/DownloadListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/EventScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/EventScanTarget.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/NewDownloadTaskListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/NewDownloadTaskListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/OpenCompletedDownloadTaskActionListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/OpenCompletedDownloadTaskActionListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/StopDownloadingTaskActionListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/StopDownloadingTaskActionListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/event/ToggleListener.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/event/ToggleListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/exception/TorrentFileNotFoundException.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/exception/TorrentFileNotFoundException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/exception/TurbineException.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/exception/TurbineException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/dao/ICompletedTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/dao/ICompletedTaskDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/dao/IDownloadingTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/dao/IDownloadingTaskDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/IDirectoryChooseService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/IDirectoryChooseService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/IDownloadService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/IDownloadService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/IHandleExceptionService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/IHandleExceptionService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/IMagnetService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/IMagnetService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/IServiceScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/IServiceScanTarget.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/interfaces/service/ITasksDisplayService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/interfaces/service/ITasksDisplayService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/BaseService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/BaseService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/DirectoryService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/DirectoryService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/DownloadService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/DownloadService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/HandleExceptionService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/HandleExceptionService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/MagnetService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/MagnetService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/ServiceScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/ServiceScanTarget.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/service/TasksDisplayService.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/service/TasksDisplayService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/thread/DownloadingObserver.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/thread/DownloadingObserver.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/thread/IndicateDownloading.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/thread/IndicateDownloading.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/utils/Base32Utils.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/utils/Base32Utils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/CompletedTaskPanel.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/CompletedTaskPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/DownloadingTaskPanel.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/DownloadingTaskPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/IListBodyPanel.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/IListBodyPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/MainFrame.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/MainFrame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/MyFrame.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/MyFrame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/SecondPanel.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/SecondPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/ThirdPanel.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/ThirdPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/TurbineView.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/TurbineView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/nchu/turbine/view/ViewScanTarget.java" afterPath="$PROJECT_DIR$/src/main/java/nchu/turbine/view/ViewScanTarget.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,14 +17,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TurbineMain.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TurbineMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/main/TurbineMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
+            <state relative-caret-position="322">
               <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="115">
+                <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -127,6 +74,7 @@
         <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/view/DownloadingTaskPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/view/CompletedTaskPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/nchu/turbine/view/ViewScanTarget.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -143,7 +91,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="465" />
     <option name="y" value="117" />
     <option name="width" value="1400" />
@@ -382,7 +330,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -392,9 +341,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.4954751" order="0" side_tool="false" content_ui="combo" />
@@ -509,7 +458,7 @@
         <state relative-caret-position="230">
           <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
-            <element signature="e#2441#2463#0" expanded="true" />
+            <element signature="e#2441#2463#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -535,16 +484,16 @@
         <state relative-caret-position="92">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1136#1137#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1246#1247#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1354#1355#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#1114#1115#0" expanded="false" />
+            <element signature="e#1136#1137#0" expanded="false" />
+            <element signature="e#1181#1182#0" expanded="false" />
+            <element signature="e#1212#1213#0" expanded="false" />
+            <element signature="e#1246#1247#0" expanded="false" />
+            <element signature="e#1270#1271#0" expanded="false" />
+            <element signature="e#1319#1320#0" expanded="false" />
+            <element signature="e#1354#1355#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -631,11 +580,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nchu/turbine/main/TurbineMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="322">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="115">
+            <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
