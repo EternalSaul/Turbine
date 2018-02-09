@@ -1,8 +1,8 @@
 package nchu.turbine.interfaces.service;
 
 /**
- * ÓÃ×÷Spring°üÉ¨Ãè
- * ¸Ã°ü´æ·ÅÒµÎñÀà½Ó¿Ú
+ * ç”¨ä½œSpringåŒ…æ‰«æ
+ * è¯¥åŒ…å­˜æ”¾ä¸šåŠ¡ç±»æ¥å£
  * @author Saulxk
  * </br>EditDate: 2017-05-17
  */

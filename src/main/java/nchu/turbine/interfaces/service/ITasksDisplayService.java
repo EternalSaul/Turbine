@@ -12,56 +12,56 @@ import nchu.turbine.view.CompletedTaskPanel;
 import nchu.turbine.view.DownloadingTaskPanel;
 
 /**
- * ÓÃÓÚË¢ĞÂÏÔÊ¾ÈÎÎñÁĞ±í
+ * ç”¨äºåˆ·æ–°æ˜¾ç¤ºä»»åŠ¡åˆ—è¡¨
  * @author Saulxk
  * </br>EditDate: 2017-06-03
  */
 public interface ITasksDisplayService {
 
 	/**
-	 * °´ÕıÔÚÏÂÔØÏòÁ¿×é£¬Ë¢ĞÂÏÔÊ¾ÕıÔÚÏÂÔØÈÎÎñÁĞ±í
+	 * æŒ‰æ­£åœ¨ä¸‹è½½å‘é‡ç»„ï¼Œåˆ·æ–°æ˜¾ç¤ºæ­£åœ¨ä¸‹è½½ä»»åŠ¡åˆ—è¡¨
 	 * </br>EditDate: 2017-05-21
 	 */
 	public void displayDownloadingTasks();
 	/**
-	 * ÏÔÊ¾ÒÑÍê³ÉµÄÈÎÎñ
+	 * æ˜¾ç¤ºå·²å®Œæˆçš„ä»»åŠ¡
 	 * </br>EditDate: 2017-05-21
 	 */
 	public void displayCompletedTasks();
 	/**
-	 * µ±ĞÂ½¨ÈÎÎñÊ±£¬Ìí¼ÓÒ»¸öÏÂÔØÈÎÎñµ½ÕıÔÚÏÂÔØÏòÁ¿×é
-	 * @param nameLab		ÈÎÎñÃû	
-	 * @param size			ÈÎÎñ´óĞ¡
-	 * @param num			ÈÎÎñÊıÁ¿
-	 * @param client		·şÎñÃû
-	 * @param createTime	´´½¨Ê±¼ä
-	 * @param torrent		ÖÖ×ÓÎÄ¼şÂ·¾¶
-	 * @param saveDirectory	´æ´¢ÎÄ¼şÂ·¾¶
+	 * å½“æ–°å»ºä»»åŠ¡æ—¶ï¼Œæ·»åŠ ä¸€ä¸ªä¸‹è½½ä»»åŠ¡åˆ°æ­£åœ¨ä¸‹è½½å‘é‡ç»„
+	 * @param nameLab		ä»»åŠ¡å	
+	 * @param size			ä»»åŠ¡å¤§å°
+	 * @param num			ä»»åŠ¡æ•°é‡
+	 * @param client		æœåŠ¡å
+	 * @param createTime	åˆ›å»ºæ—¶é—´
+	 * @param torrent		ç§å­æ–‡ä»¶è·¯å¾„
+	 * @param saveDirectory	å­˜å‚¨æ–‡ä»¶è·¯å¾„
 	 * </br>EditDate: 2017-05-21
 	 */
 	public DownloadingTaskPanel addDownloadingTasks(String nameLab, String size, int num, Client client, long createTime,File saveDirectory,File torrent);
 
 	/**
-	 * µ±É¾³ıÈÎÎñ£¬»òÕßÈÎÎñÍê³ÉÊ±
-	 * ´ÓÕıÔÚÏÂÔØÏòÁ¿×éÒÆ³ıÒ»¸öÕıÔÚÏÂÔØÈÎÎñ
-	 * @param downloadingTaskPanel		¸Ä²ÎÊıÓÉÉ¾³ı°´Å¥ÊÂ¼şÖĞ´«Èë
+	 * å½“åˆ é™¤ä»»åŠ¡ï¼Œæˆ–è€…ä»»åŠ¡å®Œæˆæ—¶
+	 * ä»æ­£åœ¨ä¸‹è½½å‘é‡ç»„ç§»é™¤ä¸€ä¸ªæ­£åœ¨ä¸‹è½½ä»»åŠ¡
+	 * @param downloadingTaskPanel		æ”¹å‚æ•°ç”±åˆ é™¤æŒ‰é’®äº‹ä»¶ä¸­ä¼ å…¥
 	 * </br>EditDate: 2017-05-21
 	 */
 	public void removeDownloadingTasks(DownloadingTaskPanel taskPanel);
 	
 	/**
-	 * @param cLabname				ÈÎÎñÃû
-	 * @param csize					ÈÎÎñ´óĞ¡
-	 * @param ccompleteTime			ÈÎÎñÍê³ÉÊ±¼ä
-	 * @param saveDirectory					ÎÄ¼ş±£´æÂ·¾¶£¬ÓÃÓÚ²é¿´É¾³ı
-	 * µ±ÈÎÎñÍê³ÉÊ±£¬Ìí¼ÓÒ»¸öÏÂÔØÈÎÎñµ½ÒÑÍê³ÉµÄÈÎÎñÏòÁ¿×é
+	 * @param cLabname				ä»»åŠ¡å
+	 * @param csize					ä»»åŠ¡å¤§å°
+	 * @param ccompleteTime			ä»»åŠ¡å®Œæˆæ—¶é—´
+	 * @param saveDirectory					æ–‡ä»¶ä¿å­˜è·¯å¾„ï¼Œç”¨äºæŸ¥çœ‹åˆ é™¤
+	 * å½“ä»»åŠ¡å®Œæˆæ—¶ï¼Œæ·»åŠ ä¸€ä¸ªä¸‹è½½ä»»åŠ¡åˆ°å·²å®Œæˆçš„ä»»åŠ¡å‘é‡ç»„
 	 * </br>EditDate: 2017-05-21
 	 */
 	public CompletedTaskPanel addCompletedTasks(String cLabname,String csize,String ccompleteTime,File saveDirectory);
 	
 	/**
-	 * µ±ÓÃ»§Ñ¡ÔñÉ¾³ıÒ»¸öÒÑÍê³ÉÈÎÎñÏîÊ±£¬´ÓÒÑÍê³ÉµÄÈÎÎñÏòÁ¿×éÉ¾³ı¸ÃÈÎÎñ
-	 * @param taskPanel ¸Ä²ÎÊıÓÉÉ¾³ı°´Å¥ÊÂ¼şÖĞ´«Èë
+	 * å½“ç”¨æˆ·é€‰æ‹©åˆ é™¤ä¸€ä¸ªå·²å®Œæˆä»»åŠ¡é¡¹æ—¶ï¼Œä»å·²å®Œæˆçš„ä»»åŠ¡å‘é‡ç»„åˆ é™¤è¯¥ä»»åŠ¡
+	 * @param taskPanel æ”¹å‚æ•°ç”±åˆ é™¤æŒ‰é’®äº‹ä»¶ä¸­ä¼ å…¥
 	 * </br>EditDate: 2017-05-21
 	 */
 	public void removeCompletedTasks(CompletedTaskPanel taskPanel);

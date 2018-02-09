@@ -8,15 +8,15 @@ import nchu.turbine.view.DownloadingTaskPanel;
 public interface IDownloadingTaskDao {
 
 	/**
-	 * х║ЁЖЁж╬ц╩╞нд╪Чжп╣д╣╠г╟обтьхннЯоРа©вИ
-	 * @return		Ёж╬ц╩╞нд╪Чжп╣д╣╠г╟обтьхннЯоРа©вИ
+	 * Е▐√Е┤╨Ф▄│Д╧┘Е▄√Ф√┤Д╩╤Д╦╜Г └Е╫⌠Е┴█Д╦▀Х╫╫Д╩╩Е┼║Е░▒И┤▐Г╩└
+	 * @return		Ф▄│Д╧┘Е▄√Ф√┤Д╩╤Д╦╜Г └Е╫⌠Е┴█Д╦▀Х╫╫Д╩╩Е┼║Е░▒И┤▐Г╩└
 	 * </br>EditDate: 2017-05-22
 	 */
 	Vector<DownloadingTaskPanel> find();
 	
 	/**
-	 * Ёж╬ц╩╞╣╠г╟обтьхннЯоРа©вИжп╣д╤тоС
-	 * @param ts	╣╠г╟обтьхннЯоРа©вИ
+	 * Ф▄│Д╧┘Е▄√Е╫⌠Е┴█Д╦▀Х╫╫Д╩╩Е┼║Е░▒И┤▐Г╩└Д╦╜Г └Е╞╧Х╠║
+	 * @param ts	Е╫⌠Е┴█Д╦▀Х╫╫Д╩╩Е┼║Е░▒И┤▐Г╩└
 	 * </br>EditDate: 2017-05-22
 	 */
 	void save(Vector<DownloadingTaskPanel> ts);

@@ -2,14 +2,14 @@ package nchu.turbine.interfaces.service;
 
 public interface IDirectoryChooseService {
 	/**
-	 * ÓÃÓÚÔÚwindowÎÄ¼şä¯ÀÀ´°¿ÚÏÂÑ¡ÔñÖÖ×ÓÎÄ¼ş</br>
-	 * @return		TorrentÎÄ¼ş¾ø¶ÔÎ»ÖÃ
+	 * ç”¨äºåœ¨windowæ–‡ä»¶æµè§ˆçª—å£ä¸‹é€‰æ‹©ç§å­æ–‡ä»¶</br>
+	 * @return		Torrentæ–‡ä»¶ç»å¯¹ä½ç½®
 	 * </br>EditDate: 2017-05-18
 	 */
 	public String chooseTorrentFile();
 	/**
-	 * ÓÃÓÚÔÚwindowÎÄ¼şä¯ÀÀ´°¿ÚÏÂÑ¡ÔñÎÄ¼şÒªÏÂÔØµ½µÄÂ·¾¶ÎÄ¼ş¼Ğ</br>
-	 * @return		ÎÄ¼ş¼Ğ¾ø¶ÔÂ·¾¶
+	 * ç”¨äºåœ¨windowæ–‡ä»¶æµè§ˆçª—å£ä¸‹é€‰æ‹©æ–‡ä»¶è¦ä¸‹è½½åˆ°çš„è·¯å¾„æ–‡ä»¶å¤¹</br>
+	 * @return		æ–‡ä»¶å¤¹ç»å¯¹è·¯å¾„
 	 * </br>EditDate: 2017-05-18
 	 */
 	public String chooseSaveDirectory();

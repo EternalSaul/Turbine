@@ -14,7 +14,7 @@ public class DefaultMouseListener implements MouseListener{
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		throw new TurbineException("Î´¶¨ÒåÈÎºÎÊÂ¼ş");
+		throw new TurbineException("æœªå®šä¹‰ä»»ä½•äº‹ä»¶");
 	}
 
 	@Override

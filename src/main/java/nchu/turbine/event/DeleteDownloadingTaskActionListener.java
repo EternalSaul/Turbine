@@ -10,23 +10,23 @@ import nchu.turbine.view.DownloadingTaskPanel;
 import nchu.turbine.view.TurbineView;
 
 /**
- * 删除正在下载任务事件
+ * 鍒犻櫎姝ｅ湪涓嬭浇浠诲姟浜嬩欢
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */
 public class DeleteDownloadingTaskActionListener implements ActionListener{
 	/**
-	 * BT下载任务客户对象
+	 * BT涓嬭浇浠诲姟瀹㈡埛瀵硅薄
 	 */
 	Client client;
 	/**
-	 * 该事件对应的正在下载任务
+	 * 璇ヤ簨浠跺搴旂殑姝ｅ湪涓嬭浇浠诲姟
 	 */
 	DownloadingTaskPanel taskPanel;
 	
 	/**
-	 * @param client		该事件对象对应的正在下载任务的BT客户对象
-	 * @param taskPanel		该事件对象对应的正在下载任务对象
+	 * @param client		璇ヤ簨浠跺璞″搴旂殑姝ｅ湪涓嬭浇浠诲姟鐨凚T瀹㈡埛瀵硅薄
+	 * @param taskPanel		璇ヤ簨浠跺璞″搴旂殑姝ｅ湪涓嬭浇浠诲姟瀵硅薄
 	 * </br>EditDate: 2017-06-24
 	 */
 	public DeleteDownloadingTaskActionListener(Client client, DownloadingTaskPanel taskPanel) {

@@ -5,13 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import nchu.turbine.interfaces.service.IHandleExceptionService;
 
 /**
- * 服务对象基类，提供了异常处理功能
+ * 鏈嶅姟瀵硅薄鍩虹被锛屾彁渚涗簡寮傚父澶勭悊鍔熻兘
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */
 public class BaseService{
   /**
- * 异常处理服务对象实例
+ * 寮傚父澶勭悊鏈嶅姟瀵硅薄瀹炰緥
  */
   @Autowired
   IHandleExceptionService exceptionService;

@@ -22,7 +22,7 @@ import nchu.turbine.interfaces.service.ITasksDisplayService;
 import nchu.turbine.thread.DownloadingObserver;
 import nchu.turbine.view.DownloadingTaskPanel;
 /**
- * ÏÂÔØ·şÎñÊµÏÖ
+ * ä¸‹è½½æœåŠ¡å®ç°
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */
@@ -30,7 +30,7 @@ import nchu.turbine.view.DownloadingTaskPanel;
 public class DownloadService extends BaseService implements IDownloadService{
 	
 	/**
-	 * ÏÂÔØÁĞ±íÏÔÊ¾·şÎñ
+	 * ä¸‹è½½åˆ—è¡¨æ˜¾ç¤ºæœåŠ¡
 	 */
 	@Autowired
 	ITasksDisplayService displayService;
@@ -41,9 +41,9 @@ public class DownloadService extends BaseService implements IDownloadService{
 	final static long GB=MB*1024;
 	
 	/**
-	 * ¿ªÊ¼ÏÂÔØÈÎÎñ
-	 * @param torrentfile			ÖÖ×ÓÎÄ¼ş
-	 * @param directorty			ÏÂÔØÂ·¾¶
+	 * å¼€å§‹ä¸‹è½½ä»»åŠ¡
+	 * @param torrentfile			ç§å­æ–‡ä»¶
+	 * @param directorty			ä¸‹è½½è·¯å¾„
 	 * </br>EditDate: 2017-05-21
 	 */
 	@Override
@@ -52,32 +52,32 @@ public class DownloadService extends BaseService implements IDownloadService{
 			public void run() {
 			try {
 					SharedTorrent torrent=SharedTorrent.fromFile(torrentfile, directory);
-					//´´½¨Torrent¿Í»§¶Ë
+					//åˆ›å»ºTorrentå®¢æˆ·ç«¯
 					Client client=new Client(InetAddress.getLocalHost(), torrent);
-					System.out.println("¿ªÊ¼ÏÂÔØÈÎÎñ");
+					System.out.println("å¼€å§‹ä¸‹è½½ä»»åŠ¡");
 					client.setMaxDownloadRate(500.0);
 					client.setMaxUploadRate(10.0);
 					
-					//¿ªÊ¼ÏÂÔØ
+					//å¼€å§‹ä¸‹è½½
 					client.download();
 					
 					DownloadingTaskPanel taskPanel=displayService.addDownloadingTasks(torrent.getName(),
 							sizeInfo(torrent.getSize()), torrent.getFilenames().size(), client, System.currentTimeMillis(),directory,torrentfile);
 					
-					//×èÈûÖ±µ½ÎÄ¼şÏÂÔØÍê³É
+					//é˜»å¡ç›´åˆ°æ–‡ä»¶ä¸‹è½½å®Œæˆ
 					client.waitForCompletion();	
 					
-					//ÑéÖ¤ÊÇÔİÍ£ÈÎÎñ»¹ÊÇÍê³É
+					//éªŒè¯æ˜¯æš‚åœä»»åŠ¡è¿˜æ˜¯å®Œæˆ
 					validateComplete(torrent, taskPanel, directory);
 					
 				} catch (NoSuchAlgorithmException e) {
-					exceptionService.handleException(new TurbineException("NoSuchAlgorithmException!"),"ÌáÊ¾",JOptionPane.DEFAULT_OPTION);
+					exceptionService.handleException(new TurbineException("NoSuchAlgorithmException!"),"æç¤º",JOptionPane.DEFAULT_OPTION);
 					e.printStackTrace();
 				} catch (UnknownHostException e) {
-					exceptionService.handleException(new TurbineException("ÕÒ²»µ½Ö÷»ú!"),"ÌáÊ¾",JOptionPane.DEFAULT_OPTION);
+					exceptionService.handleException(new TurbineException("æ‰¾ä¸åˆ°ä¸»æœº!"),"æç¤º",JOptionPane.DEFAULT_OPTION);
 					e.printStackTrace();
 				} catch (IOException e) {
-					exceptionService.handleException(new TurbineException("Î»ÖÃ´íÎó!"),"ÌáÊ¾",JOptionPane.DEFAULT_OPTION);
+					exceptionService.handleException(new TurbineException("ä½ç½®é”™è¯¯!"),"æç¤º",JOptionPane.DEFAULT_OPTION);
 					e.printStackTrace();
 				}
 			}
@@ -97,19 +97,19 @@ public class DownloadService extends BaseService implements IDownloadService{
 					client.setMaxDownloadRate(500.0);
 					client.setMaxUploadRate(10.0);
 					
-					//¿ªÊ¼ÏÂÔØ
+					//å¼€å§‹ä¸‹è½½
 					client.download();
 					
-					//Ìí¼Ó¹Û²ì
+					//æ·»åŠ è§‚å¯Ÿ
 					client.addObserver(new DownloadingObserver(taskPanel));
 					
-					//»ñÈ¡ÖÖ×Ó
+					//è·å–ç§å­
 					SharedTorrent torrent=client.getTorrent();
 					
-					//×èÈûµÈ´ıÍ£Ö¹»òÖĞ¶Ï
+					//é˜»å¡ç­‰å¾…åœæ­¢æˆ–ä¸­æ–­
 					client.waitForCompletion();
 					
-					//ÑéÖ¤ÊÇÔİÍ£ÈÎÎñ»¹ÊÇÍê³É
+					//éªŒè¯æ˜¯æš‚åœä»»åŠ¡è¿˜æ˜¯å®Œæˆ
 					validateComplete(torrent, taskPanel, directory);
 
 					
@@ -117,8 +117,8 @@ public class DownloadService extends BaseService implements IDownloadService{
 		}).start();
 	}	
 	/**
-	 * ¼ÆËãÈÎÎñ´óĞ¡ĞÅÏ¢
-	 * @param size		ÈÎÎñ×Ü×Ö½ÚÊı
+	 * è®¡ç®—ä»»åŠ¡å¤§å°ä¿¡æ¯
+	 * @param size		ä»»åŠ¡æ€»å­—èŠ‚æ•°
 	 * @return
 	 * </br>EditDate: 2017-05-21
 	 */
@@ -134,12 +134,12 @@ public class DownloadService extends BaseService implements IDownloadService{
 	}
 	
 	protected void validateComplete(SharedTorrent torrent,DownloadingTaskPanel taskPanel,File directory){
-		if(torrent.isComplete()){//¼ì²âÈÎÎñÊÇ·ñÍê³É
-			exceptionService.handleException(new TurbineException(torrent.getName()+"ÎÄ¼şÒÑ¾­ÏÂÔØ!"),"ÌáÊ¾",JOptionPane.DEFAULT_OPTION);
+		if(torrent.isComplete()){//æ£€æµ‹ä»»åŠ¡æ˜¯å¦å®Œæˆ
+			exceptionService.handleException(new TurbineException(torrent.getName()+"æ–‡ä»¶å·²ç»ä¸‹è½½!"),"æç¤º",JOptionPane.DEFAULT_OPTION);
 			displayService.removeDownloadingTasks(taskPanel);
 			displayService.addCompletedTasks(torrent.getName(),sizeInfo(torrent.getSize()), format.format(System.currentTimeMillis()), directory);
 		}else{
-			exceptionService.handleException(new TurbineException(torrent.getName()+"ÈÎÎñÒÑÔİÍ£!"),"ÌáÊ¾",JOptionPane.DEFAULT_OPTION);
+			exceptionService.handleException(new TurbineException(torrent.getName()+"ä»»åŠ¡å·²æš‚åœ!"),"æç¤º",JOptionPane.DEFAULT_OPTION);
 		}
 	}
 }

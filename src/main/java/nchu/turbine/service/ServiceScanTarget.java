@@ -1,9 +1,9 @@
 package nchu.turbine.service;
 
 /**
- * ÓÃ×÷Spring°üÉ¨Ãè
+ * ç”¨ä½œSpringåŒ…æ‰«æ
  * @author Saulxk
- * ¸Ã°ü´æ·ÅÒµÎñÀàÊµÏÖ
+ * è¯¥åŒ…å­˜æ”¾ä¸šåŠ¡ç±»å®ç°
  * </br>EditDate: 2017-05-17
  */
 public interface ServiceScanTarget {

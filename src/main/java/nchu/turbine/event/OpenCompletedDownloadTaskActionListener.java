@@ -6,18 +6,18 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * ´ò¿ªÒÑÍê³ÉµÄÈÎÎñ±£´æÂ·¾¶ÊÂ¼ş
+ * æ‰“å¼€å·²å®Œæˆçš„ä»»åŠ¡ä¿å­˜è·¯å¾„äº‹ä»¶
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */
 public class OpenCompletedDownloadTaskActionListener implements ActionListener{
 	/**
-	 * ±£´æµÄÎÄ¼şÂ·¾¶
+	 * ä¿å­˜çš„æ–‡ä»¶è·¯å¾„
 	 */
 	File saveDirectory;
 	
 	/**
-	 * @param saveDirectory	ÎÄ¼şÂ·¾¶
+	 * @param saveDirectory	æ–‡ä»¶è·¯å¾„
 	 * </br>EditDate: 2017-06-24
 	 */
 	public OpenCompletedDownloadTaskActionListener(File saveDirectory) {
@@ -27,7 +27,7 @@ public class OpenCompletedDownloadTaskActionListener implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		//µã»÷ºó£¬´ò¿ª¸ÃÎÄ¼şËùÔÚµØÖ·¡£
+		//ç‚¹å‡»åï¼Œæ‰“å¼€è¯¥æ–‡ä»¶æ‰€åœ¨åœ°å€ã€‚
 		try {
 			Runtime.getRuntime().exec("explorer.exe "+saveDirectory);
 		} catch (IOException e) {

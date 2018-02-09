@@ -11,7 +11,7 @@ import nchu.turbine.view.ThirdPanel;
 import nchu.turbine.view.TurbineView;
 
 /**
- * ÇĞ»»ÕıÔÚÏÂÔØÈÎÎñºÍÒÑÏÂÔØÈÎÎñ½çÃæµÄÊÂ¼ş
+ * åˆ‡æ¢æ­£åœ¨ä¸‹è½½ä»»åŠ¡å’Œå·²ä¸‹è½½ä»»åŠ¡ç•Œé¢çš„äº‹ä»¶
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */

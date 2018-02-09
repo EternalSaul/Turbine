@@ -22,7 +22,7 @@ import nchu.turbine.event.StopDownloadingTaskActionListener;
 import nchu.turbine.view.DownloadingTaskPanel;
 
 /**
- * ÇĞÃæÀàÓÃÓÚÀ¹½ØDownLoadingTaskDaoµÄÒ»Ğ©·½·¨£¬ÈÃÒµÎñ·ÖÀë
+ * åˆ‡é¢ç±»ç”¨äºæ‹¦æˆªDownLoadingTaskDaoçš„ä¸€äº›æ–¹æ³•ï¼Œè®©ä¸šåŠ¡åˆ†ç¦»
  * @author Saulxk
  * </br>EditDate: 2017-05-23
  */
@@ -36,8 +36,8 @@ public class DownloadingTaskAccessAspect {
 	public void DownloadingTaskFindInterface(){}
 	
 	/**
-	 * À¹½ØIDownLoadingTaskDaoµÄÈÎÎñ³Ö¾Ã»¯·½·¨
-	 * ½«ÈÎÎñÏòÁ¿¿½±´ÎªClientÎªnullµÄÈÎÎñºó·µ»Ø
+	 * æ‹¦æˆªIDownLoadingTaskDaoçš„ä»»åŠ¡æŒä¹…åŒ–æ–¹æ³•
+	 * å°†ä»»åŠ¡å‘é‡æ‹·è´ä¸ºClientä¸ºnullçš„ä»»åŠ¡åè¿”å›
 	 * @param point
 	 * @param ts
 	 * @throws Throwable
@@ -45,15 +45,15 @@ public class DownloadingTaskAccessAspect {
 	 */
 	@Around("DownloadingTaskSaveInterface(ts)")
 	public void DownloadingTaskSaveAdvice(ProceedingJoinPoint point,Vector<DownloadingTaskPanel> ts) throws Throwable{
-		System.out.println("ÏÂÔØÖĞÈÎÎñ±£´æÇĞÃæ±»Ö´ĞĞ");
+		System.out.println("ä¸‹è½½ä¸­ä»»åŠ¡ä¿å­˜åˆ‡é¢è¢«æ‰§è¡Œ");
 		Object os[]=new Object[1];
 		os[0]=cleanClient(ts);
 		point.proceed(os);
 	}
 	
 	/**
-	 * À¹½ØIDownLoadingTaskDaoÈ¡³öÕıÔÚÏÂÔØÈÎÎñµÄ·½·¨
-	 * °ÑÕâĞ©ÈÎÎñ³õÊ¼»¯ºó·µ»Ø
+	 * æ‹¦æˆªIDownLoadingTaskDaoå–å‡ºæ­£åœ¨ä¸‹è½½ä»»åŠ¡çš„æ–¹æ³•
+	 * æŠŠè¿™äº›ä»»åŠ¡åˆå§‹åŒ–åè¿”å›
 	 * @param point
 	 * @return
 	 * @throws Throwable
@@ -61,14 +61,14 @@ public class DownloadingTaskAccessAspect {
 	 */
 	@Around("DownloadingTaskFindInterface()")
 	public Vector<DownloadingTaskPanel> DownloadingTaskFindAdvice(ProceedingJoinPoint point) throws Throwable{
-		System.out.println("ÏÂÔØÖĞÈÎÎñÈ¡³öÇĞÃæ±»Ö´ĞĞ");
+		System.out.println("ä¸‹è½½ä¸­ä»»åŠ¡å–å‡ºåˆ‡é¢è¢«æ‰§è¡Œ");
 		return resetClient((Vector<DownloadingTaskPanel>) point.proceed());
 	}
 	
 	
 	/**
-	 * ÒòÎªClient²»¿É´®ĞĞ»¯£¬¸Ã·½·¨Ôò°ÑÆäÉèÖÃÎªNULLºóµÄÕıÔÚÏÂÔØÈÎÎñµÄ¿½±´ÏòÁ¿·µ»Ø¸øµ÷ÓÃÕß
-	 * @param ts		ÕıÔÚÏÂÔØµÄÈÎÎñÏòÁ¿
+	 * å› ä¸ºClientä¸å¯ä¸²è¡ŒåŒ–ï¼Œè¯¥æ–¹æ³•åˆ™æŠŠå…¶è®¾ç½®ä¸ºNULLåçš„æ­£åœ¨ä¸‹è½½ä»»åŠ¡çš„æ‹·è´å‘é‡è¿”å›ç»™è°ƒç”¨è€…
+	 * @param ts		æ­£åœ¨ä¸‹è½½çš„ä»»åŠ¡å‘é‡
 	 * @return
 	 * </br>EditDate: 2017-05-23
 	 */
@@ -76,15 +76,15 @@ public class DownloadingTaskAccessAspect {
 		Vector<DownloadingTaskPanel> vd=new Vector<DownloadingTaskPanel>();
 		for(DownloadingTaskPanel taskPanel:ts){
 			DownloadingTaskPanel panel=taskPanel.serializableClone();
-			panel.getStop().setText("¼ÌĞø");
+			panel.getStop().setText("ç»§ç»­");
 			vd.add(panel);
 		}
 		return vd;
 	}
 	
 	/**
-	 * ¸Ã·½·¨ÓÃÓÚ³õÊ¼»¯ÕıÔÚÏÂÔØÈÎÎñ
-	 * @param vd		ÕıÔÚÏÂÔØµÄÈÎÎñÏòÁ¿
+	 * è¯¥æ–¹æ³•ç”¨äºåˆå§‹åŒ–æ­£åœ¨ä¸‹è½½ä»»åŠ¡
+	 * @param vd		æ­£åœ¨ä¸‹è½½çš„ä»»åŠ¡å‘é‡
 	 * @return
 	 * @throws UnknownHostException
 	 * @throws IOException

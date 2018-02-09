@@ -7,25 +7,25 @@ import com.turn.ttorrent.client.Client;
 import nchu.turbine.view.DownloadingTaskPanel;
 
 /**
- * ÏÂÔØ·şÎñ£¬ÓÃÓÚÎ¯ÅÉÏÂÔØÈÎÎñ
+ * ä¸‹è½½æœåŠ¡ï¼Œç”¨äºå§”æ´¾ä¸‹è½½ä»»åŠ¡
  * @author Saulxk
  * </br>EditDate: 2017-05-24
  */
 public interface IDownloadService {
 
 	/**
-	 * ÓÃÓÚĞÂ½¨ÈÎÎñÊ±¼äÖĞĞÂÈÎÎñµÄÏÂÔØ
-	 * @param torrentfile		ÖÖ×ÓÎÄ¼ş
-	 * @param directory			ÏÂÔØÎÄ¼ş±£´æÂ·¾¶
+	 * ç”¨äºæ–°å»ºä»»åŠ¡æ—¶é—´ä¸­æ–°ä»»åŠ¡çš„ä¸‹è½½
+	 * @param torrentfile		ç§å­æ–‡ä»¶
+	 * @param directory			ä¸‹è½½æ–‡ä»¶ä¿å­˜è·¯å¾„
 	 * </br>EditDate: 2017-05-23
 	 */
 	void startdownload(File torrentfile, File directory);
 
 	/**
-	 * ÓÃ»§ÖØĞÂ¿ªÊ¼ÏÂÔØÊÂ¼şÖĞ±»Í£Ö¹ÈÎÎñµÄÏÂÔØ
-	 * @param client			TorrentÏÂÔØ¿Í»§¶Ë
-	 * @param taskPanel			ÕıÔÚÏÂÔØÈÎÎñÏÔÊ¾¿é
-	 * @param directory			ÏÂÔØÎÄ¼ş±£´æÂ·¾¶
+	 * ç”¨æˆ·é‡æ–°å¼€å§‹ä¸‹è½½äº‹ä»¶ä¸­è¢«åœæ­¢ä»»åŠ¡çš„ä¸‹è½½
+	 * @param client			Torrentä¸‹è½½å®¢æˆ·ç«¯
+	 * @param taskPanel			æ­£åœ¨ä¸‹è½½ä»»åŠ¡æ˜¾ç¤ºå—
+	 * @param directory			ä¸‹è½½æ–‡ä»¶ä¿å­˜è·¯å¾„
 	 * </br>EditDate: 2017-05-23
 	 */
 	void startdownload(Client client, DownloadingTaskPanel taskPanel, File directory);

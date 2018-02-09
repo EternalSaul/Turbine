@@ -27,7 +27,7 @@ import nchu.turbine.view.MyFrame;
 import nchu.turbine.view.ViewScanTarget;
 
 /**
- * ´ËÀàÊÇSpringÅäÖÃÀà
+ * æ­¤ç±»æ˜¯Springé…ç½®ç±»
  * @author Saulxk
  * </br>EditDate: 2017-05-17
  */
@@ -52,8 +52,8 @@ public class TurbineContextConfig {
 	}
 	
 	/**
-	 * @param display		ÓÃÓÚ°üÈİShell
-	 * @return   Shell		ÓÃÓÚ°üº¬Dialog
+	 * @param display		ç”¨äºåŒ…å®¹Shell
+	 * @return   Shell		ç”¨äºåŒ…å«Dialog
 	 * </br>EditDate: 2017-05-18
 	 */
 	@Bean
@@ -63,7 +63,7 @@ public class TurbineContextConfig {
 	}
 	
 	/**
-	 * @return  Display     ÓÃÓÚ°üº¬Shell
+	 * @return  Display     ç”¨äºåŒ…å«Shell
 	 * </br>EditDate: 2017-05-18
 	 */
 	@Bean
@@ -72,9 +72,9 @@ public class TurbineContextConfig {
 	}
 	
 	/**
-	 * ÒòÎª´ÅÁ¦Á´½Ó×ª»¯ÎªÖÖ×ÓµÄ×ª»¯·½Ê½¿ÉÄÜ¾­³£±ä»»£¬ËùÒÔÍ¨¹ıÏà¶ÔÀàÃû·´ÉäÒ»¸ö·şÎñÀàÊµÏÖÀ´×÷Îª×¢ÈëÀà
-	 * @param magnetservice			ÊµÏÖÀàµÄÎ»ÖÃ
-	 * @return  IMagnetService		·µ»ØÒ»¸ö´ÅÁ¦Á´½Ó·şÎñÀà
+	 * å› ä¸ºç£åŠ›é“¾æ¥è½¬åŒ–ä¸ºç§å­çš„è½¬åŒ–æ–¹å¼å¯èƒ½ç»å¸¸å˜æ¢ï¼Œæ‰€ä»¥é€šè¿‡ç›¸å¯¹ç±»ååå°„ä¸€ä¸ªæœåŠ¡ç±»å®ç°æ¥ä½œä¸ºæ³¨å…¥ç±»
+	 * @param magnetservice			å®ç°ç±»çš„ä½ç½®
+	 * @return  IMagnetService		è¿”å›ä¸€ä¸ªç£åŠ›é“¾æ¥æœåŠ¡ç±»
 	 * </br>EditDate: 2017-05-19
 	 */
 	@Bean
@@ -94,8 +94,8 @@ public class TurbineContextConfig {
 	}
 	
 	/**
-	 * ·µ»ØÒ»¸öÎÄ¼şÏµÍ³ÊÓÍ¼£¬ÓÃÓÚ»ñÈ¡DocumentÂ·¾¶(windows)»òÕßHomeÂ·¾¶(Linux)
-	 * @return		swingµÄÎÄ¼şÏµÍ³ÊÓÍ¼
+	 * è¿”å›ä¸€ä¸ªæ–‡ä»¶ç³»ç»Ÿè§†å›¾ï¼Œç”¨äºè·å–Documentè·¯å¾„(windows)æˆ–è€…Homeè·¯å¾„(Linux)
+	 * @return		swingçš„æ–‡ä»¶ç³»ç»Ÿè§†å›¾
 	 * </br>EditDate: 2017-05-19
 	 */
 	@Bean

@@ -7,14 +7,14 @@ import nchu.turbine.view.CompletedTaskPanel;
 
 public interface ICompletedTaskDao {
 	/**
-	 * х║ЁЖЁж╬ц╩╞╣дрямЙЁихннЯ╤тоСоРа©вИ
-	 * @return    Ёж╬ц╩╞нд╪ЧжпрямЙЁи╣дхннЯоРа©вИ
+	 * Е▐√Е┤╨Ф▄│Д╧┘Е▄√Г └Е╥╡Е╝▄Ф┬░Д╩╩Е┼║Е╞╧Х╠║Е░▒И┤▐Г╩└
+	 * @return    Ф▄│Д╧┘Е▄√Ф√┤Д╩╤Д╦╜Е╥╡Е╝▄Ф┬░Г └Д╩╩Е┼║Е░▒И┤▐Г╩└
 	 * </br>EditDate: 2017-05-23
 	 */
 	Vector<CompletedTaskPanel> find();
 	/**
-	 * Ёж╬ц╩╞рямЙЁихннЯ╣доРа©вИжп╣д╤тоС
-	 * @param ts		рямЙЁихннЯ╣доРа©вИ
+	 * Ф▄│Д╧┘Е▄√Е╥╡Е╝▄Ф┬░Д╩╩Е┼║Г └Е░▒И┤▐Г╩└Д╦╜Г └Е╞╧Х╠║
+	 * @param ts		Е╥╡Е╝▄Ф┬░Д╩╩Е┼║Г └Е░▒И┤▐Г╩└
 	 * </br>EditDate: 2017-05-23
 	 */
 	void save(Vector<CompletedTaskPanel> ts);

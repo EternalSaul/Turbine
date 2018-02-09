@@ -63,7 +63,7 @@ public class MyFrame implements IListBodyPanel{
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 310);
 		frame.setResizable(false);
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);        µãXÖ»ÊÇÒş²Ø´°Ìå£¬¶ø·ÇÍË³ö³ÌĞò
+//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);        ç‚¹Xåªæ˜¯éšè—çª—ä½“ï¼Œè€Œéé€€å‡ºç¨‹åº
 		frame.getContentPane().setLayout(null);
 		frame.setTitle("Turbine 1.0");
 		JPanel headPanel = new JPanel();
@@ -86,7 +86,7 @@ public class MyFrame implements IListBodyPanel{
 		savePath.setColumns(10);
 		
 		JButton viewButton = new JButton("\u6D4F\u89C8");
-		viewButton.addActionListener(new ActionListener() {//ä¯ÀÀ°´Å¥
+		viewButton.addActionListener(new ActionListener() {//æµè§ˆæŒ‰é’®
 			public void actionPerformed(ActionEvent arg0) {
 				savePath.setText(chooseService.chooseSaveDirectory());
 			}

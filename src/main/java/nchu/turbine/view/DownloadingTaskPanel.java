@@ -22,7 +22,7 @@ import nchu.turbine.interfaces.service.ITasksDisplayService;
 
 public class DownloadingTaskPanel extends JPanel{
 	long createTime;
-	Client client;			//ÏÂÔØ¶Ë
+	Client client;			//ä¸‹è½½ç«¯
 	JLabel name;
 	JLabel nameLab;
 	JLabel size;
@@ -30,8 +30,8 @@ public class DownloadingTaskPanel extends JPanel{
 	JLabel time;
 	JLabel speed;
 	File torrent;
-	File saveDirectory;//ÎÄ¼ş±£´æÄ¿Â¼
-	JProgressBar progress;//ÏÂÔØ½ø¶È
+	File saveDirectory;//æ–‡ä»¶ä¿å­˜ç›®å½•
+	JProgressBar progress;//ä¸‹è½½è¿›åº¦
 	JButton delete;
 	JButton stop;
 	JButton openFile;
@@ -76,12 +76,12 @@ public class DownloadingTaskPanel extends JPanel{
 		return openFile;
 	}
 	/**
-	 * @param nameLab				ÈÎÎñÃû
-	 * @param size					ÈÎÎñ´óĞ¡
-	 * @param num					ÎÄ¼şÊıÄ¿
-	 * @param client				ÏÂÔØµÄÏß³Ì¶Ë
-	 * @param createTime			´´½¨Ê±¼ä
-	 * @param saveDirectory			±£´æÂ·¾¶
+	 * @param nameLab				ä»»åŠ¡å
+	 * @param size					ä»»åŠ¡å¤§å°
+	 * @param num					æ–‡ä»¶æ•°ç›®
+	 * @param client				ä¸‹è½½çš„çº¿ç¨‹ç«¯
+	 * @param createTime			åˆ›å»ºæ—¶é—´
+	 * @param saveDirectory			ä¿å­˜è·¯å¾„
 	 * </br>EditDate: 2017-05-21
 	 */
 	public DownloadingTaskPanel(String nameLab,String size,int num,Client client,long createTime,File saveDirectory,File torrent) {
@@ -93,9 +93,9 @@ public class DownloadingTaskPanel extends JPanel{
 	}
 	
 	/**
-	 * @param cnameLab		ÈÎÎñÃû
-	 * @param csize			ÈÎÎñ´óĞ¡
-	 * @param cnum			ÎÄ¼şÊıÄ¿
+	 * @param cnameLab		ä»»åŠ¡å
+	 * @param csize			ä»»åŠ¡å¤§å°
+	 * @param cnum			æ–‡ä»¶æ•°ç›®
 	 * </br>EditDate: 2017-05-21
 	 */
 	public void init(String cnameLab,String csize,int cnum){
@@ -103,7 +103,7 @@ public class DownloadingTaskPanel extends JPanel{
 		this.setBorder(BorderFactory.createLineBorder(Color.gray));
 		this.setBounds(10, 21, 380, 100);
 		
-		this.name = new JLabel("ÈÎÎñÃû:");
+		this.name = new JLabel("ä»»åŠ¡å:");
 		this.name.setBounds(10, 10, 54, 15);
 		this.add(name);
 		
@@ -144,14 +144,14 @@ public class DownloadingTaskPanel extends JPanel{
 		
 		stop.addActionListener(new StopDownloadingTaskActionListener(client,this));
 		
-		delete = new JButton("É¾³ı");
+		delete = new JButton("åˆ é™¤");
 		delete.setForeground(Color.RED);
 		delete.setBounds(170, 75, 93, 23);
 		this.add(delete);
 		
 		delete.addActionListener(new DeleteDownloadingTaskActionListener(client, this));
 		
-		openFile = new JButton("\u6253\u5F00\u6587\u4EF6");//´ò¿ªÎÄ¼ş°´Å¥
+		openFile = new JButton("\u6253\u5F00\u6587\u4EF6");//æ‰“å¼€æ–‡ä»¶æŒ‰é’®
 		openFile.setForeground(Color.BLACK);
 		openFile.setForeground(Color.RED);
 		openFile.setBounds(65, 75, 93, 23);
@@ -160,9 +160,9 @@ public class DownloadingTaskPanel extends JPanel{
 	}
 	
 	/**
-	 * ÈÃDownloadingTaskPanel¿É´®ĞĞ»¯
-	 * Êµ¼ÊÉÏÊÇ°ÑClientÉèÖÃÎªnull
-	 * @return		Ô­¶ÔÏóµÄ¿É´®ĞĞ»¯¶ÔÏó
+	 * è®©DownloadingTaskPanelå¯ä¸²è¡ŒåŒ–
+	 * å®é™…ä¸Šæ˜¯æŠŠClientè®¾ç½®ä¸ºnull
+	 * @return		åŸå¯¹è±¡çš„å¯ä¸²è¡ŒåŒ–å¯¹è±¡
 	 * </br>EditDate: 2017-05-23
 	 */
 	public DownloadingTaskPanel serializableClone(){

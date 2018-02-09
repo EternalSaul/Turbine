@@ -32,16 +32,16 @@ public class MainFrame extends JFrame{
 	}
 	
 
-	public JPanel getJpanel() {// 获取当前 的Jpanel
+	public JPanel getJpanel() {// 鑾峰彇褰撳墠 鐨凧panel
 		return jpanel;
 	}
 
-	public void setJpanel(JPanel jpanel) {// 重新设置Jpanel
+	public void setJpanel(JPanel jpanel) {// 閲嶆柊璁剧疆Jpanel
 		this.jpanel = jpanel;
 	}
 
 	private void initialize() {
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");// 设置日期格式
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");// 璁剧疆鏃ユ湡鏍煎紡
 		this.setResizable(false);
 		this.setBounds(100, 100, 426, 489);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

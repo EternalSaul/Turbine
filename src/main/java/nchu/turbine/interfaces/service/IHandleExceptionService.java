@@ -3,15 +3,15 @@ package nchu.turbine.interfaces.service;
 import nchu.turbine.exception.TurbineException;
 
 /**
- * ¸Ã½Ó¿ÚÓÃÓÚ´¦Àí²¿·ÖÒì³££¬²¢µ¯³ö´°ÌåÌáÊ¾ÓÃ»§
+ * è¯¥æ¥å£ç”¨äºå¤„ç†éƒ¨åˆ†å¼‚å¸¸ï¼Œå¹¶å¼¹å‡ºçª—ä½“æç¤ºç”¨æˆ·
  * @author Saulxk
  * </br>EditDate: 2017-05-21
  */
 public interface IHandleExceptionService {
 	/**
-	 * @param exception			Òì³£
-	 * @param title				Òì³£´°¿ÚÃû
-	 * @param messageType		´°¿ÚÀàĞÍ
+	 * @param exception			å¼‚å¸¸
+	 * @param title				å¼‚å¸¸çª—å£å
+	 * @param messageType		çª—å£ç±»å‹
 	 * </br>EditDate: 2017-05-21
 	 */
 	public void handleException(TurbineException exception,String title,int messageType);

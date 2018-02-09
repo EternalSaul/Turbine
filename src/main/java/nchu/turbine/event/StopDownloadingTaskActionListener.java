@@ -23,7 +23,7 @@ import nchu.turbine.view.DownloadingTaskPanel;
 import nchu.turbine.view.TurbineView;
 
 /**
- * ÔİÍ£ºÍ¼ÌĞøÈÎÎñ°´Å¥ÊÂ¼ş
+ * æš‚åœå’Œç»§ç»­ä»»åŠ¡æŒ‰é’®äº‹ä»¶
  * @author Saulxk
  * </br>EditDate: 2017-05-24
  */
@@ -34,8 +34,8 @@ public class StopDownloadingTaskActionListener implements ActionListener{
 	
 	
 	/**	
-	 * @param client		¶ÔÓ¦Ttorrent¿ò¼ÜÖĞ BTÈÎÎñ¿Í»§¶ÔÏó
-	 * @param taskPanel		¶ÔÓ¦ÕıÔÚÏÂÔØÈÎÎñ¶ÔÏó
+	 * @param client		å¯¹åº”Ttorrentæ¡†æ¶ä¸­ BTä»»åŠ¡å®¢æˆ·å¯¹è±¡
+	 * @param taskPanel		å¯¹åº”æ­£åœ¨ä¸‹è½½ä»»åŠ¡å¯¹è±¡
 	 * </br>EditDate: 2017-06-24
 	 */
 	public StopDownloadingTaskActionListener(Client client,	DownloadingTaskPanel taskPanel) {
@@ -56,26 +56,26 @@ public class StopDownloadingTaskActionListener implements ActionListener{
 		new Thread(new Runnable() {
 			public void run() {
 				JButton stop=((JButton)event.getSource());
-				if(stop.getText().equals("ÔİÍ£")){
-					//ÇĞ»»µ½²»ÏìÓ¦ÊÂ¼ş×´Ì¬
-					stop.setText("ÕıÔÚÔİÍ£");
+				if(stop.getText().equals("æš‚åœ")){
+					//åˆ‡æ¢åˆ°ä¸å“åº”äº‹ä»¶çŠ¶æ€
+					stop.setText("æ­£åœ¨æš‚åœ");
 					client.stop();
-					//ÔİÍ£³É¹¦ÇĞ»»»ØÏìÓ¦×´Ì¬
-					stop.setText("¼ÌĞø");
-				}else if(stop.getText().equals("¼ÌĞø")){
-					stop.setText("ÔİÍ£");
+					//æš‚åœæˆåŠŸåˆ‡æ¢å›å“åº”çŠ¶æ€
+					stop.setText("ç»§ç»­");
+				}else if(stop.getText().equals("ç»§ç»­")){
+					stop.setText("æš‚åœ");
 					Client client=null;
 					try {
-						//½âÎöÖÖ×ÓÎÄ¼ş£¬´´½¨ÏÂÔØÖÖ×Ó
+						//è§£æç§å­æ–‡ä»¶ï¼Œåˆ›å»ºä¸‹è½½ç§å­
 						SharedTorrent torrent=SharedTorrent.fromFile(taskPanel.getTorrent(),taskPanel.getSaveDirectory());
-						//´´½¨ĞÂµÄÏÂÔØ¿Í»§¶Ë
+						//åˆ›å»ºæ–°çš„ä¸‹è½½å®¢æˆ·ç«¯
 						client = new Client(InetAddress.getLocalHost(), torrent);
 						taskPanel.setClient(client);
-						//´ÓÉÏÏÂÎÄÖĞÈ¡³öÏÂÔØ·şÎñ
+						//ä»ä¸Šä¸‹æ–‡ä¸­å–å‡ºä¸‹è½½æœåŠ¡
 						IDownloadService downloadService=(IDownloadService) TurbineView.getContext().getBean("downloadService");
-						//Ë¢ĞÂ×ÔÉíµÄÏÂÔØ¿Í»§¶Ë
+						//åˆ·æ–°è‡ªèº«çš„ä¸‹è½½å®¢æˆ·ç«¯
 						StopDownloadingTaskActionListener.this.client=client;
-						//°ÑÈÎÎñÎ¯ÅÉ¸øÏÂÔØ·şÎñÖĞµÄÏÂÔØÏß³Ì
+						//æŠŠä»»åŠ¡å§”æ´¾ç»™ä¸‹è½½æœåŠ¡ä¸­çš„ä¸‹è½½çº¿ç¨‹
 						downloadService.startdownload(client, taskPanel, taskPanel.getSaveDirectory());
 					} catch (NoSuchAlgorithmException e) {
 						e.printStackTrace();

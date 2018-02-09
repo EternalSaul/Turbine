@@ -1,8 +1,8 @@
 package nchu.turbine.aspect;
 
 /**
- * ÓÃ×÷Spring°üÉ¨Ãè
- * ¸Ã°ü´æ·ÅÇĞÃæÀà
+ * ç”¨ä½œSpringåŒ…æ‰«æ
+ * è¯¥åŒ…å­˜æ”¾åˆ‡é¢ç±»
  * @author Saulxk
  * </br>EditDate: 2017-05-17
  */

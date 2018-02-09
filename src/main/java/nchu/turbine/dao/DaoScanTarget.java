@@ -1,8 +1,8 @@
 package nchu.turbine.dao;
 
 /**
- * ÓÃ×÷Spring°üÉ¨Ãè
- * ¸Ã°ü´æÔÚDaoÊµÏÖ
+ * ç”¨ä½œSpringåŒ…æ‰«æ
+ * è¯¥åŒ…å­˜åœ¨Daoå®ç°
  * @author Saulxk
  * EditDate: 2017-05-17
  */

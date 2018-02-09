@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import nchu.turbine.interfaces.service.IDirectoryChooseService;
 
 /**
- * Â·¾¶·şÎñÊµÏÖ
+ * è·¯å¾„æœåŠ¡å®ç°
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */
@@ -16,13 +16,13 @@ import nchu.turbine.interfaces.service.IDirectoryChooseService;
 public class DirectoryService extends BaseService implements IDirectoryChooseService{
 	
 	/**
-	 * ÖÖ×ÓÑ¡ÔñÆ÷
+	 * ç§å­é€‰æ‹©å™¨
 	 */
 	@Autowired
 	FileDialog chooser;
 	
 	/**
-	 * ÎÄ¼ş±£´æÆ÷
+	 * æ–‡ä»¶ä¿å­˜å™¨
 	 */
 	@Autowired
 	DirectoryDialog saver;

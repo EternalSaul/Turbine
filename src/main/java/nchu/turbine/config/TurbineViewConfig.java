@@ -21,7 +21,7 @@ import nchu.turbine.view.MyFrame;
 import nchu.turbine.view.ViewScanTarget;
 
 /**
- * ÊÓÍ¼ÅäÖÃÀà£¬ÅäÖÃ½çÃæµÄÀà
+ * è§†å›¾é…ç½®ç±»ï¼Œé…ç½®ç•Œé¢çš„ç±»
  * @author Saulxk
  * </br>EditDate: 2017-05-24
  */
@@ -31,21 +31,21 @@ import nchu.turbine.view.ViewScanTarget;
 public class TurbineViewConfig {
 	
 	/**
-	 * ÒÑÍê³ÉÈÎÎñÊı¾İ´æÈ¡¶ÔÏó
+	 * å·²å®Œæˆä»»åŠ¡æ•°æ®å­˜å–å¯¹è±¡
 	 */
 	@Autowired
 	ICompletedTaskDao ctd;
 	
 	/**
-	 * ÕıÔÚÏÂÔØÈÎÎñÊı¾İ´æÈ¡¶ÔÏó
+	 * æ­£åœ¨ä¸‹è½½ä»»åŠ¡æ•°æ®å­˜å–å¯¹è±¡
 	 */
 	@Autowired
 	IDownloadingTaskDao dtd;
 	
 
 	/**
-	 * ÕıÔÚÏÂÔØÈÎÎñµÄÈÎÎñ±í Bean
-	 * @return  ±£´ædownloadingTaskµÄVector
+	 * æ­£åœ¨ä¸‹è½½ä»»åŠ¡çš„ä»»åŠ¡è¡¨ Bean
+	 * @return  ä¿å­˜downloadingTaskçš„Vector
 	 * </br>EditDate: 2017-05-24
 	 */
 	@Bean
@@ -56,8 +56,8 @@ public class TurbineViewConfig {
 	
 
 	/**
-	 * ÒÑÍê³ÉµÄÈÎÎñ±í Bean
-	 * @return  ±£´æcompletedTaskµÄVector
+	 * å·²å®Œæˆçš„ä»»åŠ¡è¡¨ Bean
+	 * @return  ä¿å­˜completedTaskçš„Vector
 	 * </br>EditDate: 2017-05-24
 	 */
 	@Bean

@@ -8,15 +8,15 @@ import com.turn.ttorrent.client.Client;
 import nchu.turbine.view.DownloadingTaskPanel;
 
 /**
- * ¸ÃÀàÓÃÓÚÔÚ½çÃæÉÏ¸üĞÂÏÔÊ¾ÏÂÔØËÙ¶È£¬Ê±¼ä
- * Ëü×÷ÎªTTorrent¿ò¼ÜÖĞClientÀàµÄ¹Û²ìÕß
+ * è¯¥ç±»ç”¨äºåœ¨ç•Œé¢ä¸Šæ›´æ–°æ˜¾ç¤ºä¸‹è½½é€Ÿåº¦ï¼Œæ—¶é—´
+ * å®ƒä½œä¸ºTTorrentæ¡†æ¶ä¸­Clientç±»çš„è§‚å¯Ÿè€…
  * @author Saulxk
  * </br>EditDate: 2017-06-03
  */
 public class DownloadingObserver implements Observer{
 
 	final static int KB=1024;
-	long remain;//Ê£ÓàÁ¿
+	long remain;//å‰©ä½™é‡
 	double rate;
 	DownloadingTaskPanel card;
 	float progress;
@@ -33,23 +33,23 @@ public class DownloadingObserver implements Observer{
 	public void update(Observable o, Object arg) {
 		Client client=(Client)o;
 		
-		//¼ä¸ôµÄºÁÃëÊı
+		//é—´éš”çš„æ¯«ç§’æ•°
 		double mills=times;
 		times=System.currentTimeMillis();
 		
 		if(remain!=0){
 		
-			//¼ä¸ôµÄÃëÊı
+			//é—´éš”çš„ç§’æ•°
 			mills=(times-mills)/1000;
 			System.out.println("mills:"+mills);
 			
-			//¼ä¸ôÊ±¼äÄÚÏÂÔØÁ¿
+			//é—´éš”æ—¶é—´å†…ä¸‹è½½é‡
 			long download=remain-client.getTorrent().getLeft();
 			remain=remain-download;
-			System.out.println("ÕâÊÇÊÇDOWN:"+download);
-			System.out.println("ÕâÊÇmills:"+mills);
+			System.out.println("è¿™æ˜¯æ˜¯DOWN:"+download);
+			System.out.println("è¿™æ˜¯mills:"+mills);
 			rate=download/mills;
-			System.out.println("ÕâÊÇrate:"+rate);
+			System.out.println("è¿™æ˜¯rate:"+rate);
 			timeUpdate();
 			rateUpdate();
 			
@@ -63,31 +63,31 @@ public class DownloadingObserver implements Observer{
 	}
 	
 	/**
-	 * ¸üĞÂÊ±¼ä
+	 * æ›´æ–°æ—¶é—´
 	 * </br>EditDate: 2017-05-21
 	 */
 	 private void timeUpdate(){
 
-		//Ê±¼ä¼ÆËã
+		//æ—¶é—´è®¡ç®—
 		int hour=0,minute=0,second=0;
 		
 		if(rate>0){
 			long remaincopy=remain;
-			hour=(int) (remaincopy/(rate*3600));//Ê£ÓàĞ¡Ê±
+			hour=(int) (remaincopy/(rate*3600));//å‰©ä½™å°æ—¶
 			remaincopy=(long) (remaincopy%(rate*3600));
 			minute=(int)(remaincopy/(rate*60));
 			remaincopy=(long) (remaincopy%(rate*60));
-			second=(int) (remaincopy/rate);//Ê£ÓàÃëÖÓ
+			second=(int) (remaincopy/rate);//å‰©ä½™ç§’é’Ÿ
 		}
 		
-		card.setTime(hour+"Ğ¡Ê±"+minute+"·ÖÖÓ"+second+"Ãë");
+		card.setTime(hour+"å°æ—¶"+minute+"åˆ†é’Ÿ"+second+"ç§’");
 		
-		System.out.println(hour+"Ğ¡Ê±"+minute+"·ÖÖÓ"+second+"Ãë");
+		System.out.println(hour+"å°æ—¶"+minute+"åˆ†é’Ÿ"+second+"ç§’");
 		
 	}
 	
 	/**
-	 * ¸üĞÂÏÂÔØËÙ¶È
+	 * æ›´æ–°ä¸‹è½½é€Ÿåº¦
 	 * </br>EditDate: 2017-05-21
 	 */
 	private void rateUpdate(){

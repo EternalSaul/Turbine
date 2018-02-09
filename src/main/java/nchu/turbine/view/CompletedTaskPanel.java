@@ -16,17 +16,17 @@ import nchu.turbine.event.OpenCompletedDownloadTaskActionListener;
 import nchu.turbine.interfaces.service.ITasksDisplayService;
 
 public class CompletedTaskPanel extends JPanel{
-	JLabel Labname;//ÈÎÎñÃû
-	JLabel size;//ÈÎÎñ´óĞ¡
-	JLabel completeTime;//Íê³ÉÊ±¼ä
-	File saveDirectory;//ÎÄ¼şÂ·¾¶Ö¸Õë
+	JLabel Labname;//ä»»åŠ¡å
+	JLabel size;//ä»»åŠ¡å¤§å°
+	JLabel completeTime;//å®Œæˆæ—¶é—´
+	File saveDirectory;//æ–‡ä»¶è·¯å¾„æŒ‡é’ˆ
 	JButton openFile;
 	JButton deleteFile;
 	/**
-	 * @param cLabname				ÈÎÎñÃû
-	 * @param csize					ÈÎÎñ´óĞ¡
-	 * @param ccompleteTime			ÈÎÎñÍê³ÉÊ±¼ä
-	 * @param saveDirectory			ÎÄ¼ş±£´æÂ·¾¶£¬ÓÃÓÚ²é¿´É¾³ı
+	 * @param cLabname				ä»»åŠ¡å
+	 * @param csize					ä»»åŠ¡å¤§å°
+	 * @param ccompleteTime			ä»»åŠ¡å®Œæˆæ—¶é—´
+	 * @param saveDirectory			æ–‡ä»¶ä¿å­˜è·¯å¾„ï¼Œç”¨äºæŸ¥çœ‹åˆ é™¤
 	 * </br>EditDate: 2017-05-21
 	 */
 	public File getSaveDirectory() {
@@ -50,9 +50,9 @@ public class CompletedTaskPanel extends JPanel{
 		this.deleteFile = deleteFile;
 	}
 	/**
-	 * @param cLabname			ÈÎÎñÃû
-	 * @param csize				ÈÎÎñ´óĞ¡
-	 * @param ccompleteTime		Íê³ÉÊ±¼ä
+	 * @param cLabname			ä»»åŠ¡å
+	 * @param csize				ä»»åŠ¡å¤§å°
+	 * @param ccompleteTime		å®Œæˆæ—¶é—´
 	 * </br>EditDate: 2017-05-21
 	 */
 	public void init(String cLabname,String csize,String ccompleteTime){
@@ -60,7 +60,7 @@ public class CompletedTaskPanel extends JPanel{
 		this.setBorder(BorderFactory.createLineBorder(Color.gray));
 		this.setBounds(10, 23, 380, 100);
 		
-		JLabel label_1 = new JLabel("\u540D\u5B57\uFF1A");//ĞÕÃû
+		JLabel label_1 = new JLabel("\u540D\u5B57\uFF1A");//å§“å
 		label_1.setBounds(10, 10, 54, 15);
 		this.add(label_1);
 		
@@ -73,7 +73,7 @@ public class CompletedTaskPanel extends JPanel{
 		size.setBounds(10, 35, 54, 15);
 		this.add(size);
 		
-		openFile = new JButton("\u6253\u5F00\u6587\u4EF6");//´ò¿ªÎÄ¼ş°´Å¥
+		openFile = new JButton("\u6253\u5F00\u6587\u4EF6");//æ‰“å¼€æ–‡ä»¶æŒ‰é’®
 		openFile.setForeground(Color.BLACK);
 		openFile.setBounds(274, 6, 93, 23);
 		this.add(openFile);
@@ -82,7 +82,7 @@ public class CompletedTaskPanel extends JPanel{
 		completeTime.setBounds(62, 35, 202, 15);
 		this.add(completeTime);
 		
-		deleteFile = new JButton("É¾³ıÎÄ¼ş");//É¾³ıÎÄ¼ş
+		deleteFile = new JButton("åˆ é™¤æ–‡ä»¶");//åˆ é™¤æ–‡ä»¶
 		deleteFile.setBounds(274, 31, 93, 23);
 		this.add(deleteFile);
 		deleteFile.addActionListener(new DeleteCompletedDownloadTaskActionListener(this));

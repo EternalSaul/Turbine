@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import nchu.turbine.view.MyFrame;
 
 /**
- * 下载窗体显示事件
+ * 涓嬭浇绐椾綋鏄剧ず浜嬩欢
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */
@@ -18,13 +18,13 @@ import nchu.turbine.view.MyFrame;
 @Qualifier("newDownloadTaskListener")
 public class NewDownloadTaskListener implements MouseListener{
 	/**
-	 * 对应下载窗体
+	 * 瀵瑰簲涓嬭浇绐椾綋
 	 */
 	@Autowired
 	MyFrame myFrame;
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		myFrame.setVisible();		//显示下载窗体
+		myFrame.setVisible();		//鏄剧ず涓嬭浇绐椾綋
 	}
 
 	@Override

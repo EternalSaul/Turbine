@@ -13,7 +13,7 @@ import nchu.turbine.view.MyFrame;
 import nchu.turbine.view.ViewScanTarget;
 
 /**
- * 为集合配置类，它集合了其他两个配置类
+ * 涓洪泦鍚堥厤缃被锛屽畠闆嗗悎浜嗗叾浠栦袱涓厤缃被
  * @author Saulxk
  * </br>EditDate: 2017-05-24
  */

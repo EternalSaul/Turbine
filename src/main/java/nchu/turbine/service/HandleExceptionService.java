@@ -15,7 +15,7 @@ import nchu.turbine.interfaces.service.IHandleExceptionService;
 import nchu.turbine.view.TurbineView;
 
 /**
- * Òì³£´¦Àí·şÎñÊµÏÖ
+ * å¼‚å¸¸å¤„ç†æœåŠ¡å®ç°
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */
@@ -23,12 +23,12 @@ import nchu.turbine.view.TurbineView;
 public class HandleExceptionService extends BaseService implements IHandleExceptionService{
 	
 	/**
-	 * ÓÃ´¦Å×³öÌáÊ¾´°¿ÚµÄFrame
+	 * ç”¨å¤„æŠ›å‡ºæç¤ºçª—å£çš„Frame
 	 */
 	JFrame main;
 	
 	/**
-	 * Bean¶ÔÓ¦Ãû
+	 * Beanå¯¹åº”å
 	 */
 	@Value("${mainView}")
 	String mainView;

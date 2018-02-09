@@ -3,7 +3,7 @@ package nchu.turbine.view;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * TurbineÉÏÏÂÎÄ
+ * Turbineä¸Šä¸‹æ–‡
  * @author Saulxk
  * </br>EditDate: 2017-05-23
  */

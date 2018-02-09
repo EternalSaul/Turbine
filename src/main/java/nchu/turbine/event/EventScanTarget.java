@@ -1,7 +1,7 @@
 package nchu.turbine.event;
 
 /**
- * ÓÃÓÚÉ¨ÃèÊÂ¼ş°ü
+ * ç”¨äºæ‰«æäº‹ä»¶åŒ…
  * @author Saulxk
  * </br>EditDate: 2017-05-20
  */

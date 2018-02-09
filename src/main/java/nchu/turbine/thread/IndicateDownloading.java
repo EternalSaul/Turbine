@@ -8,7 +8,7 @@ import java.util.Vector;
 import com.turn.ttorrent.client.Client;
 
 /**
- * ´ËÀàÖ»ÊÇSaulÓÃÀ´×ö²âÊÔÀàÓÃµÄ
+ * æ­¤ç±»åªæ˜¯Saulç”¨æ¥åšæµ‹è¯•ç±»ç”¨çš„
  * @author Saulxk
  * EditDate: 2017-05-17
  */
@@ -37,12 +37,12 @@ public class IndicateDownloading implements Runnable {
 	
 	public void printInfo(){
 		System.out.println("123");
-		System.out.println("ÎÄ¼şÃû"+client.getTorrent().getFilenames().get(0));
-		System.out.println("ÎÄ¼ş×Ü´óĞ¡"+client.getTorrent().getSize());
-		System.out.println("·şÎñÆ÷Êı"+client.getTorrent().getTrackerCount());
-		System.out.println("ÉÏ´«Êı"+client.getTorrent().getUploaded());
-		System.out.println("Ê£ÓàÊı"+client.getTorrent().getLeft());
-		System.out.println("ÏÂÔØÊı"+client.getTorrent().getDownloaded()+"\n\n");
+		System.out.println("æ–‡ä»¶å"+client.getTorrent().getFilenames().get(0));
+		System.out.println("æ–‡ä»¶æ€»å¤§å°"+client.getTorrent().getSize());
+		System.out.println("æœåŠ¡å™¨æ•°"+client.getTorrent().getTrackerCount());
+		System.out.println("ä¸Šä¼ æ•°"+client.getTorrent().getUploaded());
+		System.out.println("å‰©ä½™æ•°"+client.getTorrent().getLeft());
+		System.out.println("ä¸‹è½½æ•°"+client.getTorrent().getDownloaded()+"\n\n");
 	}
 	
 

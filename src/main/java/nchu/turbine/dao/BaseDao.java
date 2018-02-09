@@ -10,7 +10,7 @@ import java.io.ObjectOutputStream;
 import java.util.Vector;
 
 /**
- * Dao»ùÀà£¬ÎªÁË¼ò»¯ÉÏ²ã£¬´úÂë¸´ÓÃ
+ * DaoåŸºç±»ï¼Œä¸ºäº†ç®€åŒ–ä¸Šå±‚ï¼Œä»£ç å¤ç”¨
  * @author Saulxk
  * @param <T>
  * </br>EditDate: 2017-05-23
@@ -18,8 +18,8 @@ import java.util.Vector;
 public class BaseDao<T> {
 	
 	/**
-	 * È¡³ö³Ö¾Ã»¯µÄ¶ÔÏó
-	 * @param diretory		³Ö¾Ã»¯ÎÄ¼şÂ·¾¶
+	 * å–å‡ºæŒä¹…åŒ–çš„å¯¹è±¡
+	 * @param diretory		æŒä¹…åŒ–æ–‡ä»¶è·¯å¾„
 	 * @return
 	 * </br>EditDate: 2017-05-23
 	 */
@@ -39,20 +39,20 @@ public class BaseDao<T> {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}finally{
-				if(ts==null){ System.out.println("Òì³££¬Êä³öÁË¿Õ"); ts=new Vector<T>();}
+				if(ts==null){ System.out.println("å¼‚å¸¸ï¼Œè¾“å‡ºäº†ç©º"); ts=new Vector<T>();}
 			}
 		}else{
-			System.out.println("Ã»ÓĞÎÄ¼ş£¬Êä³öÁË¿Õ");
+			System.out.println("æ²¡æœ‰æ–‡ä»¶ï¼Œè¾“å‡ºäº†ç©º");
 			ts=new Vector<T>();
 		}
-		System.out.println("È¡³öÁËÊı¾İ");
+		System.out.println("å–å‡ºäº†æ•°æ®");
 		return ts;
 	}
 	
 	/**
-	 * ³Ö¾Ã»¯²Ù×÷
-	 * @param ts		³Ö¾Ã»¯¶ÔÏóÏòÁ¿
-	 * @param diretory	³Ö¾Ã»¯ÎÄ¼şÂ·¾¶
+	 * æŒä¹…åŒ–æ“ä½œ
+	 * @param ts		æŒä¹…åŒ–å¯¹è±¡å‘é‡
+	 * @param diretory	æŒä¹…åŒ–æ–‡ä»¶è·¯å¾„
 	 * @throws IOException
 	 * </br>EditDate: 2017-05-23
 	 */

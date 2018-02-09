@@ -35,7 +35,7 @@ import nchu.turbine.interfaces.service.ITasksDisplayService;
 import nchu.turbine.view.TurbineView;
 
 /**
- * ĞÂÈÎÎñÏÂÔØ°´Å¥ÊÂ¼ş
+ * æ–°ä»»åŠ¡ä¸‹è½½æŒ‰é’®äº‹ä»¶
  * @author Saulxk
  * </br>EditDate: 2017-05-24
  */
@@ -43,39 +43,39 @@ import nchu.turbine.view.TurbineView;
 @Qualifier("downloadListener")
 public class DownloadListener implements MouseListener{
 	/**
-	 * ÈÎÎñÏÂÔØ±£´æÂ·¾¶
+	 * ä»»åŠ¡ä¸‹è½½ä¿å­˜è·¯å¾„
 	 */
 	private JTextField savePath;
 	/**
-	 * ÖÖ×ÓÎÄ¼şÂ·¾¶
+	 * ç§å­æ–‡ä»¶è·¯å¾„
 	 */
 	private JTextField torrentPath;
 	/**
-	 * ´¥·¢´°Ìå
+	 * è§¦å‘çª—ä½“
 	 */
 	private JFrame frame;
 	/**
-	 * ÖÖ×Ó¶ÔÓ¦µÄÎÄ¼şÏÔÊ¾ÇøÓò
+	 * ç§å­å¯¹åº”çš„æ–‡ä»¶æ˜¾ç¤ºåŒºåŸŸ
 	 */
 	private JPanel filesDisplay;
 	/**
-	 * ½âÎöÖÖ×ÓÎÄ¼ş»ò´ÅÁ¦Á´½ÓµÄÏß³Ì³Ø
+	 * è§£æç§å­æ–‡ä»¶æˆ–ç£åŠ›é“¾æ¥çš„çº¿ç¨‹æ± 
 	 */
 	ExecutorService service=Executors.newFixedThreadPool(1);
 	/**
-	 * ´ÅÁ¦Á´½Ó×ª»¯·şÎñ
+	 * ç£åŠ›é“¾æ¥è½¬åŒ–æœåŠ¡
 	 */
 	@Autowired
 	private IMagnetService magnetService;
 	
 	/**
-	 * ÈÎÎñÏÔÊ¾·şÎñ
+	 * ä»»åŠ¡æ˜¾ç¤ºæœåŠ¡
 	 */
 	@Autowired
 	private ITasksDisplayService displayService;
 	
 	/**
-	 * ÏÂÔØ·şÎñ
+	 * ä¸‹è½½æœåŠ¡
 	 */
 	@Autowired
 	private IDownloadService downloadService;
@@ -103,46 +103,46 @@ public class DownloadListener implements MouseListener{
 		File torrentfile=null,
 			 savedirectory=null;
 		
-		//»ñÈ¡ÖÖ×ÓÎÄ¼ş
-		if(tp.startsWith("magnet:?xt=urn:btih:")){//´ÅÁ¦Á´½Ó
-			JOptionPane.showMessageDialog(frame, "µã»÷È·¶¨¿ªÊ¼¼ì²â´ÅÁ¦Á´½Ó,µÈ´ıµ¯³öÌáÊ¾¿ò","µÈ´ı", JOptionPane.PLAIN_MESSAGE);
-			Future<File> future=service.submit(new Callable<File>() {//¹¹½¨Ïß³ÌCallable,²¢´«µİ¸øÏß³Ì³Ø
+		//è·å–ç§å­æ–‡ä»¶
+		if(tp.startsWith("magnet:?xt=urn:btih:")){//ç£åŠ›é“¾æ¥
+			JOptionPane.showMessageDialog(frame, "ç‚¹å‡»ç¡®å®šå¼€å§‹æ£€æµ‹ç£åŠ›é“¾æ¥,ç­‰å¾…å¼¹å‡ºæç¤ºæ¡†","ç­‰å¾…", JOptionPane.PLAIN_MESSAGE);
+			Future<File> future=service.submit(new Callable<File>() {//æ„å»ºçº¿ç¨‹Callable,å¹¶ä¼ é€’ç»™çº¿ç¨‹æ± 
 				@Override
 				public File call() throws Exception {
 					return magnetService.Magnet2Torrent(tp);
 				}
 			});
 			try {
-				//×èÈûÏß³Ì
+				//é˜»å¡çº¿ç¨‹
 				torrentfile=future.get(2, TimeUnit.MINUTES);
 			} catch (InterruptedException | ExecutionException | TimeoutException e1) {
 				e1.printStackTrace();
 			}
 			if(torrentfile==null){
-				JOptionPane.showMessageDialog(frame, "´ÅÁ¦Á´½Ó¼ì²âÊ§°Ü£¬Î´ÕÒµ½¶ÔÓ¦ÖÖ×ÓÎÄ¼ş!","´íÎó", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "ç£åŠ›é“¾æ¥æ£€æµ‹å¤±è´¥ï¼Œæœªæ‰¾åˆ°å¯¹åº”ç§å­æ–‡ä»¶!","é”™è¯¯", JOptionPane.WARNING_MESSAGE);
 				frame.setVisible(false);
 			}
 //			else{
-//				JOptionPane.showMessageDialog(frame, "¼ì²â³É¹¦¿ªÊ¼ÏÂÔØ","³É¹¦", JOptionPane.CLOSED_OPTION);
+//				JOptionPane.showMessageDialog(frame, "æ£€æµ‹æˆåŠŸå¼€å§‹ä¸‹è½½","æˆåŠŸ", JOptionPane.CLOSED_OPTION);
 //			}
 //			torrentfile=magnetService.Magnet2Torrent(tp);
 		}else{
 			torrentfile=new File(tp);
 			if(!torrentfile.exists()){
-				JOptionPane.showMessageDialog(frame, "ÕÒ²»µ½ÖÖ×ÓÎÄ¼ş£¬ÖÖ×ÓÎÄ¼şÂ·¾¶´íÎó!","´íÎó", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "æ‰¾ä¸åˆ°ç§å­æ–‡ä»¶ï¼Œç§å­æ–‡ä»¶è·¯å¾„é”™è¯¯!","é”™è¯¯", JOptionPane.WARNING_MESSAGE);
 				frame.setVisible(false);
-				throw new TorrentFileNotFoundException("ÕÒ²»µ½ÖÖ×ÓÎÄ¼ş£¬ÖÖ×ÓÎÄ¼şÂ·¾¶´íÎó!");
+				throw new TorrentFileNotFoundException("æ‰¾ä¸åˆ°ç§å­æ–‡ä»¶ï¼Œç§å­æ–‡ä»¶è·¯å¾„é”™è¯¯!");
 			}
 		}
 		
 		int i=1;
 		try {
-			//ÁĞ³öÎÄ¼şÇåµ¥ÈÃÓÃ»§È·¶¨ÊÇ·ñÏÂÔØ
+			//åˆ—å‡ºæ–‡ä»¶æ¸…å•è®©ç”¨æˆ·ç¡®å®šæ˜¯å¦ä¸‹è½½
 			Torrent torrent=Torrent.load(torrentfile);
 			displayService.displayTorrentFilesList(filesDisplay, torrent.getFilenames());
 			
-			//×èÈûÈ·¶¨£¬·µ»Ø0ÎªÈ·¶¨ÏÂÔØ
-			i=JOptionPane.showConfirmDialog(frame,"¼ì²â³É¹¦£¬µã»÷È·¶¨¿ªÊ¼ÏÂÔØ","ÖÖ×Ó¼ÓÔØ³É¹¦",JOptionPane.YES_NO_OPTION);
+			//é˜»å¡ç¡®å®šï¼Œè¿”å›0ä¸ºç¡®å®šä¸‹è½½
+			i=JOptionPane.showConfirmDialog(frame,"æ£€æµ‹æˆåŠŸï¼Œç‚¹å‡»ç¡®å®šå¼€å§‹ä¸‹è½½","ç§å­åŠ è½½æˆåŠŸ",JOptionPane.YES_NO_OPTION);
 			
 		} catch (NoSuchAlgorithmException e1) {
 			e1.printStackTrace();
@@ -150,24 +150,24 @@ public class DownloadListener implements MouseListener{
 			e1.printStackTrace();
 		}
 		
-		//Çå¿ÕÎÄ¼şÇåµ¥
+		//æ¸…ç©ºæ–‡ä»¶æ¸…å•
 		displayService.removeTorrentFilesList(filesDisplay);
 		
-		//ÓÃ»§È·¶¨ÏÂÔØ
+		//ç”¨æˆ·ç¡®å®šä¸‹è½½
 		if(i==0){
-		//»ñÈ¡±£´æÂ·¾¶
+		//è·å–ä¿å­˜è·¯å¾„
 		savedirectory=new File(sp);
 		if(!savedirectory.exists())	savedirectory.mkdirs();
 		
-		//¿ªÊ¼ÏÂÔØ
+		//å¼€å§‹ä¸‹è½½
 		downloadService.startdownload(torrentfile, savedirectory);
 		}
 		
-		//Çå¿Õ´°¿ÚĞÅÏ¢
+		//æ¸…ç©ºçª—å£ä¿¡æ¯
 		savePath.setText("");
 		torrentPath.setText("");
 		
-		//¹Ø±Õ´°¿ÚÏÔÊ¾
+		//å…³é—­çª—å£æ˜¾ç¤º
 		frame.setVisible(false);
 		
 	}

@@ -8,18 +8,18 @@ import nchu.turbine.view.CompletedTaskPanel;
 import nchu.turbine.view.TurbineView;
 
 /**
- * É¾³ıÒÑÍê³ÉÈÎÎñÊÂ¼ş
+ * åˆ é™¤å·²å®Œæˆä»»åŠ¡äº‹ä»¶
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */
 public class DeleteCompletedDownloadTaskActionListener implements ActionListener{
 	/**
-	 * ¶ÔÓ¦·ÖÒÑÍê³ÉÈÎÎñ
+	 * å¯¹åº”åˆ†å·²å®Œæˆä»»åŠ¡
 	 */
 	CompletedTaskPanel taskPanel;
 	
 	/**
-	 * @param taskPanel		¸ÃÊÂ¼ş¶ÔÏó¶ÔÓ¦µÄÈÎÎñ
+	 * @param taskPanel		è¯¥äº‹ä»¶å¯¹è±¡å¯¹åº”çš„ä»»åŠ¡
 	 * </br>EditDate: 2017-06-24
 	 */
 	public DeleteCompletedDownloadTaskActionListener(CompletedTaskPanel taskPanel) {
@@ -33,7 +33,7 @@ public class DeleteCompletedDownloadTaskActionListener implements ActionListener
 			public void run() {
 				ITasksDisplayService displayService=(ITasksDisplayService) TurbineView.getContext().getBean("tasksDisplayService");
 				displayService.removeCompletedTasks(taskPanel);
-				//²Ù×÷ÏµÍ³¼¶±ğÉ¾³ıÎÄ¼ş
+				//æ“ä½œç³»ç»Ÿçº§åˆ«åˆ é™¤æ–‡ä»¶
 			}
 		}).start();
 	}

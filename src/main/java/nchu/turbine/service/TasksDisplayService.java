@@ -36,7 +36,7 @@ import nchu.turbine.view.ThirdPanel;
 import nchu.turbine.view.TurbineView;
 
 /**
- * ÈÎÎñÏÔÊ¾·şÎñ¶ÔÏóÊµÏÖ
+ * ä»»åŠ¡æ˜¾ç¤ºæœåŠ¡å¯¹è±¡å®ç°
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */
@@ -45,11 +45,11 @@ public class TasksDisplayService extends BaseService implements ITasksDisplaySer
 	
 	@Autowired
 	@Qualifier("downloadingTaskPanels")
-	Vector<DownloadingTaskPanel> downloadingTasks;		//ÕıÔÚÏÂÔØÈÎÎñÁĞ±íÏòÁ¿×é
+	Vector<DownloadingTaskPanel> downloadingTasks;		//æ­£åœ¨ä¸‹è½½ä»»åŠ¡åˆ—è¡¨å‘é‡ç»„
 	
 	@Autowired
 	@Qualifier("completedTaskPanels")
-	Vector<CompletedTaskPanel> completedTasks;		//ÒÑÍê³ÉÈÎÎñÁĞ±íÏòÁ¿×é
+	Vector<CompletedTaskPanel> completedTasks;		//å·²å®Œæˆä»»åŠ¡åˆ—è¡¨å‘é‡ç»„
 	
 	
 	@Value("${downloadingPanel}")
@@ -72,24 +72,24 @@ public class TasksDisplayService extends BaseService implements ITasksDisplaySer
 		
 		JPanel jPanel=downloadingPanel.getBodyPanel();
 		/*
-		 * 1.¼ÆËãBodyPanelËùĞèÒªµÄ´óĞ¡£¬¿í¶È380¹Ì¶¨²»±ä£¬¸ß¶ÈÊÇ     ÈÎÎñ¸öÊı*101
+		 * 1.è®¡ç®—BodyPanelæ‰€éœ€è¦çš„å¤§å°ï¼Œå®½åº¦380å›ºå®šä¸å˜ï¼Œé«˜åº¦æ˜¯     ä»»åŠ¡ä¸ªæ•°*101
 		 * */
 		
-		//2.ÕıÔÚÏÂÔØµÄÈÎÎñ¸öÊı
+		//2.æ­£åœ¨ä¸‹è½½çš„ä»»åŠ¡ä¸ªæ•°
 		int downloadingTaskNum=downloadingTasks.size();
 		
 		jPanel.setPreferredSize(new Dimension(380, downloadingTaskNum*120));
 		jPanel.setLayout(new GridLayout((downloadingTaskNum>3?downloadingTaskNum:3), 1, 0, 20));
 		
-		//3.ÒÆ³ıÒÔÇ°µÄÊÓÍ¼
+		//3.ç§»é™¤ä»¥å‰çš„è§†å›¾
 		jPanel.removeAll();
 		
-		//4.½¨Á¢ĞÂµÄÊÓÍ¼
+		//4.å»ºç«‹æ–°çš„è§†å›¾
 		for(DownloadingTaskPanel taskPanel:downloadingTasks){
 			jPanel.add(taskPanel);
 		}
 		
-		//5.Ë¢ĞÂ½çÃæ
+		//5.åˆ·æ–°ç•Œé¢
 		jPanel.validate();
 		jPanel.repaint();
 		
@@ -98,19 +98,19 @@ public class TasksDisplayService extends BaseService implements ITasksDisplaySer
 	@Override
 	public DownloadingTaskPanel addDownloadingTasks(String nameLab, String size, int num, Client client, long createTime,File saveDirectory,File torrent) {
 		
-		//1.´´½¨	 DownloadingTaskPanel
+		//1.åˆ›å»º	 DownloadingTaskPanel
 		DownloadingTaskPanel taskPanel=new DownloadingTaskPanel(nameLab, size, num, client, createTime,saveDirectory,torrent);
 		
-		//2.Ìí¼Óµ½ÕıÔÚÏÂÔØÈÎÎñÏòÁ¿×é
+		//2.æ·»åŠ åˆ°æ­£åœ¨ä¸‹è½½ä»»åŠ¡å‘é‡ç»„
 		downloadingTasks.add(taskPanel);
 		
-		///³Ö¾Ã»¯
+		///æŒä¹…åŒ–
 		dtd.save(downloadingTasks);
 		
-		//Ë¢ĞÂÕıÔÚÏÂÔØÈÎÎñ±í
+		//åˆ·æ–°æ­£åœ¨ä¸‹è½½ä»»åŠ¡è¡¨
 		displayDownloadingTasks();
 		
-		//´´½¨¼àÊÓÏß³Ì
+		//åˆ›å»ºç›‘è§†çº¿ç¨‹
 		client.addObserver(new DownloadingObserver(taskPanel));
 		
 		return taskPanel;
@@ -121,28 +121,28 @@ public class TasksDisplayService extends BaseService implements ITasksDisplaySer
 	public void removeDownloadingTasks(DownloadingTaskPanel taskPanel) {
 		taskPanel.getClient().stop();
 		
-		//1.´ÓÕıÔÚÏÂÔØÈÎÎñÏòÁ¿×é£¬ÒÆ³ıÄ¿±ê
+		//1.ä»æ­£åœ¨ä¸‹è½½ä»»åŠ¡å‘é‡ç»„ï¼Œç§»é™¤ç›®æ ‡
 		downloadingTasks.remove(taskPanel);
 		
-		///³Ö¾Ã»¯
+		///æŒä¹…åŒ–
 		dtd.save(downloadingTasks);
 		
-		//2.Ë¢ĞÂÕıÔÚÏÂÔØÈÎÎñ±í
+		//2.åˆ·æ–°æ­£åœ¨ä¸‹è½½ä»»åŠ¡è¡¨
 		displayDownloadingTasks();
 	}
 
 	@Override
 	public CompletedTaskPanel addCompletedTasks(String cLabname,String csize,String ccompleteTime,File file) {
-		//1.´´½¨	 CompletedTaskPanel 
+		//1.åˆ›å»º	 CompletedTaskPanel 
 		CompletedTaskPanel completedTaskPanel= new CompletedTaskPanel(cLabname, csize, ccompleteTime, file);
 		//if()
-		//2.Ìí¼Óµ½ÒÑ¾­Íê³ÉÈÎÎñÏòÁ¿×é
+		//2.æ·»åŠ åˆ°å·²ç»å®Œæˆä»»åŠ¡å‘é‡ç»„
 		completedTasks.add(completedTaskPanel);
 		
-		///³Ö¾Ã»¯
+		///æŒä¹…åŒ–
 		ctd.save(completedTasks);
 		
-		//Ë¢ĞÂÏÂÔØÍê³ÉÈÎÎñ±í
+		//åˆ·æ–°ä¸‹è½½å®Œæˆä»»åŠ¡è¡¨
 		displayCompletedTasks();
 		
 		return completedTaskPanel;
@@ -152,13 +152,13 @@ public class TasksDisplayService extends BaseService implements ITasksDisplaySer
 	@Override
 	public void removeCompletedTasks(CompletedTaskPanel completedTaskPanel) {
 		
-		//1.´ÓÕıÔÚÏÂÔØÈÎÎñÏòÁ¿×é£¬ÒÆ³ıÄ¿±ê
+		//1.ä»æ­£åœ¨ä¸‹è½½ä»»åŠ¡å‘é‡ç»„ï¼Œç§»é™¤ç›®æ ‡
 		completedTasks.remove(completedTaskPanel);
 		
-		///³Ö¾Ã»¯
+		///æŒä¹…åŒ–
 		ctd.save(completedTasks);
 		
-		//2.Ë¢ĞÂÕıÔÚÏÂÔØÈÎÎñ±í
+		//2.åˆ·æ–°æ­£åœ¨ä¸‹è½½ä»»åŠ¡è¡¨
 		displayCompletedTasks();
 	}
 	
@@ -169,24 +169,24 @@ public class TasksDisplayService extends BaseService implements ITasksDisplaySer
 				
 				JPanel jPanel=completedPanel.getBodyPanel();
 				/*
-				 * 1.¼ÆËãBodyPanelËùĞèÒªµÄ´óĞ¡£¬¿í¶È380¹Ì¶¨²»±ä£¬¸ß¶ÈÊÇ     ÈÎÎñ¸öÊı*101
+				 * 1.è®¡ç®—BodyPanelæ‰€éœ€è¦çš„å¤§å°ï¼Œå®½åº¦380å›ºå®šä¸å˜ï¼Œé«˜åº¦æ˜¯     ä»»åŠ¡ä¸ªæ•°*101
 				 * */
 				
-				//2.ÒÑ¾­Íê³ÉµÄÈÎÎñ¸öÊı
+				//2.å·²ç»å®Œæˆçš„ä»»åŠ¡ä¸ªæ•°
 				int completedTaskNum=completedTasks.size();
 				
 				jPanel.setPreferredSize(new Dimension(380, completedTaskNum*120));
 				jPanel.setLayout(new GridLayout((completedTaskNum>3?completedTaskNum:3), 1, 0, 20));
 				
-				//3.ÒÆ³ıÒÔÇ°µÄÊÓÍ¼
+				//3.ç§»é™¤ä»¥å‰çš„è§†å›¾
 				jPanel.removeAll();
 				
-				//4.½¨Á¢ĞÂµÄÊÓÍ¼
+				//4.å»ºç«‹æ–°çš„è§†å›¾
 				for(CompletedTaskPanel completedTaskPanel:completedTasks){
 					jPanel.add(completedTaskPanel);
 				}
 				
-				//5.Ë¢ĞÂ½çÃæ
+				//5.åˆ·æ–°ç•Œé¢
 				jPanel.validate();
 				jPanel.repaint();
 	}
@@ -204,10 +204,10 @@ public class TasksDisplayService extends BaseService implements ITasksDisplaySer
 		filesDisplay.setSize(414, num*20);
 		filesDisplay.setLayout(new GridLayout((num>6?num:6),1,0,2));
 		
-		//ÒÆ³ıÒÔÇ°µÄÊÓÍ¼
+		//ç§»é™¤ä»¥å‰çš„è§†å›¾
 		filesDisplay.removeAll();
 		
-		JLabel jLabel=new JLabel("ÒÑ¼ì²âµ½ÖÖ×Ó°üº¬ÒÔÏÂÎÄ¼ş:");
+		JLabel jLabel=new JLabel("å·²æ£€æµ‹åˆ°ç§å­åŒ…å«ä»¥ä¸‹æ–‡ä»¶:");
 		jLabel.setPreferredSize(new Dimension(400, 20));
 		filesDisplay.add(jLabel);
 		

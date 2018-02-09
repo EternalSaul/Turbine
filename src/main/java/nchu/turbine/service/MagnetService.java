@@ -18,7 +18,7 @@ import nchu.turbine.interfaces.service.IMagnetService;
 import nchu.turbine.utils.Base32Utils;
 
 /**
- * ´ÅÁ¦Á´½Ó½âÎö·şÎñÊµÏÖ
+ * ç£åŠ›é“¾æ¥è§£ææœåŠ¡å®ç°
  * @author Saulxk
  * </br>EditDate: 2017-06-24
  */
@@ -37,12 +37,12 @@ public class MagnetService implements IMagnetService{
 
 	@Override
 	public File Magnet2Torrent(String magnetlink) {
-		//½âÎö´ÅÁ¦Á´½Ó
+		//è§£æç£åŠ›é“¾æ¥
 		String urn=magnetlink.replaceAll("^\\S*btih:\\b","");
 		File tf=null;
 		try {
 			tf=TurbineMagnetServer(urn);
-			System.out.println("Ã»ÕÒµ½");
+			System.out.println("æ²¡æ‰¾åˆ°");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -56,28 +56,28 @@ public class MagnetService implements IMagnetService{
 	}
 	
 	/**
-	 * TurbineÖÖ×Ó¿â´ÅÁ¦Á´½Ó½âÎö
-	 * @param hash  ´ÅÁ¦Á´½ÓÌØÕ÷
+	 * Turbineç§å­åº“ç£åŠ›é“¾æ¥è§£æ
+	 * @param hash  ç£åŠ›é“¾æ¥ç‰¹å¾
 	 * @return
 	 * @throws IOException
 	 * </br>EditDate: 2017-06-24
 	 */
 	public File TurbineMagnetServer(String hash) throws IOException{
 		
-		System.out.println("TurbineMagnetServerÖ´ĞĞ");
+		System.out.println("TurbineMagnetServeræ‰§è¡Œ");
 		
-		//¹¹½¨³¬Á´½Ó
+		//æ„å»ºè¶…é“¾æ¥
 		URL url=new URL("http://127.0.0.1:6868/"+hash);
 		HttpURLConnection connection=(HttpURLConnection) url.openConnection();
 
-		//Èç¹ûÊÇ´íÎóµÄÏìÓ¦Ö±½Ó·µ»Ønull
+		//å¦‚æœæ˜¯é”™è¯¯çš„å“åº”ç›´æ¥è¿”å›null
 		if(connection.getResponseCode()!=200) return null;
 		if(!connection.getContentType().equals("application/x-bittorrent")) return null;
 		
-		//»ñÈ¡±£´æÖÖ×ÓÎÄ¼şµÄÂ·¾¶
+		//è·å–ä¿å­˜ç§å­æ–‡ä»¶çš„è·¯å¾„
 		File tf=getTorrentSavePath();
 		
-		//½«ĞÅÏ¢Ğ´ÈëÖÖ×ÓÎÄ¼ş
+		//å°†ä¿¡æ¯å†™å…¥ç§å­æ–‡ä»¶
 		FileOutputStream fo=new FileOutputStream(tf);
 		InputStream is=connection.getInputStream();
 		byte b[]=new byte[4096];
@@ -90,45 +90,45 @@ public class MagnetService implements IMagnetService{
 			fo.flush();
 		}
 		
-		System.out.println("TurbineMagnetServerÒÑ·µ»Ø");
+		System.out.println("TurbineMagnetServerå·²è¿”å›");
 		
 		return tf;
 	}
 	
 	/**
-	 * Vezu´ÅÁ¦Á´½Ó½âÎö
-	 * @param urn	´ÅÁ¦Á´½ÓÌØÕ÷
-	 * @return		ÖÖ×ÓÎÄ¼ş
+	 * Vezuç£åŠ›é“¾æ¥è§£æ
+	 * @param urn	ç£åŠ›é“¾æ¥ç‰¹å¾
+	 * @return		ç§å­æ–‡ä»¶
 	 * @throws IOException
 	 * </br>EditDate: 2017-06-24
 	 */
 	public File VezuMagnetServer(String urn) throws IOException{
-		System.out.println("vezuÒÑ¾­Ö´ĞĞ");
+		System.out.println("vezuå·²ç»æ‰§è¡Œ");
 		String hash=Base32Utils.biginteger_Encode_Base32(urn);
 		String link="http://magnet.vuze.com/magnetLookup?hash="+hash;
-		//³¢ÊÔ»ñÈ¡ÖÖ×ÓÎÄ¼ş
+		//å°è¯•è·å–ç§å­æ–‡ä»¶
 		File tf=null;
 		int len=0;
 		byte[] b=new byte[10240];
-		tf=getTorrentSavePath();	//ÖÖ×ÓÎÄ¼ş±£´æÂ·¾¶
+		tf=getTorrentSavePath();	//ç§å­æ–‡ä»¶ä¿å­˜è·¯å¾„
 		HttpURLConnection connection=null;
 		try {
 			URL url = new URL(link);
-			connection = (HttpURLConnection) url.openConnection();	///»ñÈ¡HTTPÁ¬½Ó
+			connection = (HttpURLConnection) url.openConnection();	///è·å–HTTPè¿æ¥
 			if(connection.getResponseCode()!=200) return null;
-			if(!connection.getContentType().equals("application/x-bittorrent"))	return null;	//ÅĞ¶ÏÀàĞÍÊÇ·ñÎªÖÖ×Ó
+			if(!connection.getContentType().equals("application/x-bittorrent"))	return null;	//åˆ¤æ–­ç±»å‹æ˜¯å¦ä¸ºç§å­
 		} catch (MalformedURLException e1) {
 			e1.printStackTrace();
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		//»ñÈ¡ÖÖ×ÓÎÄ¼ş
+		//è·å–ç§å­æ–‡ä»¶
 		try(InputStream is=connection.getInputStream();
 			BufferedOutputStream tfos=new BufferedOutputStream(new FileOutputStream(tf),10240);){
-			long total=connection.getContentLengthLong();		//»ñÈ¡ÖÖ×ÓÎÄ¼ş×Ü³¤¶È
+			long total=connection.getContentLengthLong();		//è·å–ç§å­æ–‡ä»¶æ€»é•¿åº¦
 			System.out.println("length:"+total);
 			double downloaded=0;
-			while((len=is.read(b,0, 10240))!=-1){		//ÏÂÔØ
+			while((len=is.read(b,0, 10240))!=-1){		//ä¸‹è½½
 				downloaded+=len;
 				process=downloaded/total*100;
 				System.out.println(process);
@@ -146,16 +146,16 @@ public class MagnetService implements IMagnetService{
 	
 	
 	/**
-	 * »ñÈ¡ÖÖ×ÓÎÄ¼ş±£´æÂ·¾¶
-	 * @return   »ñÈ¡ÖÖ×ÓÎÄ¼ş±£´æÂ·¾¶
+	 * è·å–ç§å­æ–‡ä»¶ä¿å­˜è·¯å¾„
+	 * @return   è·å–ç§å­æ–‡ä»¶ä¿å­˜è·¯å¾„
 	 * </br>EditDate: 2017-06-24
 	 */
 	protected File getTorrentSavePath(){
 		String document=fileSystemView.getDefaultDirectory().getPath();
 		document+="/Turbine";
 		File torrentdirectory=new File(document);
-		if(!torrentdirectory.exists()) torrentdirectory.mkdirs();		//´´½¨TurbineÄ¬ÈÏÎÄµµ
-		File torrent=new File(document+"/"+System.currentTimeMillis()+".torrent");		//´´½¨Ò»¸öÖÖ×ÓÎÄ¼ş
+		if(!torrentdirectory.exists()) torrentdirectory.mkdirs();		//åˆ›å»ºTurbineé»˜è®¤æ–‡æ¡£
+		File torrent=new File(document+"/"+System.currentTimeMillis()+".torrent");		//åˆ›å»ºä¸€ä¸ªç§å­æ–‡ä»¶
 		return torrent;
 	}
 	
